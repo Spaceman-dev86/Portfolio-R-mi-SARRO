@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rémi Sarro - Développeur Web & QA Engineer | Portfolio</title>
+    <meta name="description" content="Portfolio de Rémi Sarro, développeur web et QA engineer. Découvrez mes projets et compétences en développement web moderne.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="accueil.css">
+    <link rel="icon" type="image/png" href="logo/web-designer.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="accueil.html" class="logo">
+                <img src="logo/web-designer.png" alt="Logo Rémi Sarro" class="logo-img">
+                Rémi Sarro
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="accueil.html" class="nav-link active">Accueil</a></li>
+                <li><a href="apropos.html" class="nav-link">À propos</a></li>
+                <li><a href="competences.html" class="nav-link">Compétences</a></li>
+                <li><a href="projets.html" class="nav-link">Projets</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-container container">
+                <div class="hero-content">
+                    <div class="hero-text fade-in-left">
+                        <h1 class="hero-title">Sarro Rémi</h1>
+                        <h2 class="hero-subtitle">Développeur web / QA engineer</h2>
+                        <p class="hero-description">
+                            À la manière d'un astronaute, je transforme vos idées en fusées prêtes à explorer l'univers du web.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="projets.html" class="btn btn-primary">Voir mes projets</a>
+                            <a href="cv/Rémi Sarro_CDI_Neutre_Mai.pdf" class="btn btn-outline" download>Télécharger CV</a>
+                        </div>
+                    </div>
+                    <div class="hero-image fade-in-right">
+                        <div class="hero-image-wrapper">
+                            <img src="logo/IMG_9953.jpg" alt="Photo de profil Rémi Sarro" class="profile-image">
+                            <div class="hero-decoration"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Scroll indicator -->
+                <div class="scroll-indicator">
+                    <div class="scroll-arrow"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick About Section -->
+        <section class="quick-about section">
+            <div class="container">
+                <div class="section-title fade-in-up">
+                    <h2>Qui suis-je ?</h2>
+                </div>
+                <div class="quick-about-content">
+                    <div class="quick-about-text fade-in-left">
+                        <p>
+                            Ingénieur de formation avec une passion pour le développement web et l'assurance qualité. 
+                            Je combine expertise technique et créativité pour créer des solutions web innovantes et robustes.
+                        </p>
+                        <p>
+                            Spécialisé dans les technologies modernes du web, je m'assure que chaque projet respecte 
+                            les plus hauts standards de qualité et d'expérience utilisateur.
+                        </p>
+                        <a href="apropos.html" class="btn btn-outline">En savoir plus</a>
+                    </div>
+                    <div class="quick-about-stats fade-in-right">
+                        <div class="stat-item">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Années d'expérience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Projets réalisés</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Satisfaction client</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="featured-projects section">
+            <div class="container">
+                <div class="section-title fade-in-up">
+                    <h2>Projets vedette</h2>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card fade-in-up">
+                        <div class="project-image">
+                            <img src="portfolio/spaceman.png" alt="Projet Spaceman">
+                            <div class="project-overlay">
+                                <button class="btn btn-primary" onclick="openModal('spaceman')">Voir le projet</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Spaceman</h3>
+                            <p>Application web moderne avec interface utilisateur intuitive</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Animations</span>
+                                <span class="tech-tag">Responsive Design</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card fade-in-up">
+                        <div class="project-image">
+                            <img src="portfolio/conciergerie.png" alt="Projet Conciergerie">
+                            <div class="project-overlay">
+                                <button class="btn btn-primary" onclick="openModal('conciergerie')">Voir le projet</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Conciergerie</h3>
+                            <p>Plateforme de services avec système de gestion avancé</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Interactifs design</span>
+                                <span class="tech-tag">Hebergement</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card fade-in-up">
+                        <div class="project-image">
+                            <img src="portfolio/brebis.png" alt="Projet Brebis Brigasque">
+                            <div class="project-overlay">
+                                <button class="btn btn-primary" onclick="openModal('brebis')">Voir le projet</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Brebis Brigasque</h3>
+                            <p>Site web pour la promotion du patrimoine local et des traditions</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Data base</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">Maintenance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-cta fade-in-up">
+                    <a href="projets.html" class="btn btn-primary">Voir tous les projets</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content fade-in-up">
+                    <h2>Prêt à décoller ensemble ?</h2>
+                    <p>Transformons vos idées en réalité digitale. Contactez-moi pour discuter de votre projet.</p>
+                    <a href="contact.html" class="btn btn-primary">Démarrer un projet</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><a href="accueil.html">Rémi Sarro</a></h3>
+                    <p>Développeur web & QA Engineer</p>
+                    <p>Transformant les idées en solutions web innovantes</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <div class="footer-nav-columns">
+                        <div class="footer-nav-col">
+                            <a href="apropos.html">À propos</a>
+                            <a href="competences.html">Compétences</a>
+                        </div>
+                        <div class="footer-nav-col">
+                            <a href="projets.html">Projets</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <a href="mailto:remi.sarro@gmail.com">remi.sarro@gmail.com</a><br>
+                    <a href="tel:+33685139774">+33 6 85 13 97 74</a>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/r%C3%A9mi-sarro-3b72231b8/" class="social-link" target="_blank">
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/remi-sarro" class="social-link" target="_blank">
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Rémi Sarro. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Modal Spaceman -->
+    <div id="modal-spaceman" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closeModal('spaceman')">&times;</button>
+            
+            <!-- Header with wallpaper -->
+            <div class="popup-header">
+                <div class="popup-wallpaper" style="background-image: url('portfolio/spaceman-wall.png');">
+                    <h2 class="popup-title">Spaceman Marketing</h2>
+                </div>
+            </div>
+            
+            <!-- Logo positioned outside header -->
+            <div class="popup-logo">
+                <img src="portfolio/spaceman.png" alt="Spaceman Logo">
+            </div>
+            
+            <!-- Content section -->
+            <div class="popup-body">
+                <div class="popup-main-content">
+                    <h3>À propos du projet</h3>
+                    <p class="popup-description">
+                        Site web moderne pour une agence de marketing digital spécialisée dans l'exploration de nouveaux territoires commerciaux. 
+                        Design épuré avec une identité visuelle forte inspirée de l'univers spatial.
+                    </p>
+                </div>
+                
+                <div class="popup-sidebar">
+                    <div class="popup-features">
+                        <h4>Fonctionnalités</h4>
+                        <ul>
+                            <li>Design responsive et moderne</li>
+                            <li>Animations CSS fluides</li>
+                            <li>Interface utilisateur intuitive</li>
+                            <li>Optimisation SEO</li>
+                            <li>Formulaire de contact intégré</li>
+                        </ul>
+                    </div>
+                    <div class="popup-tech">
+                        <h4>Technologies</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Animations</span>
+                            <span class="tech-tag">Responsive Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Conciergerie -->
+    <div id="modal-conciergerie" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closeModal('conciergerie')">&times;</button>
+            
+            <!-- Header with wallpaper -->
+            <div class="popup-header">
+                <div class="popup-wallpaper" style="background-image: url('portfolio/conciergerie-wall.png');">
+                    <h2 class="popup-title">Conciergerie de Luxe</h2>
+                </div>
+            </div>
+            
+            <!-- Logo positioned outside header -->
+            <div class="popup-logo">
+                <img src="portfolio/conciergerie.png" alt="Conciergerie Logo">
+            </div>
+            
+            <!-- Content section -->
+            <div class="popup-body">
+                <div class="popup-main-content">
+                    <h3>À propos du projet</h3>
+                    <p class="popup-description">
+                        Plateforme web élégante pour une conciergerie haut de gamme offrant des services personnalisés. 
+                        Interface sophistiquée reflétant le standing et la qualité des services proposés.
+                    </p>
+                    <p class="popup-link">
+                        <a href="https://conciergerie-lechappee.com/" target="_blank" rel="noopener noreferrer">conciergerie</a>
+                    </p>
+                </div>
+                
+                <div class="popup-sidebar">
+                    <div class="popup-features">
+                        <h4>Fonctionnalités</h4>
+                        <ul>
+                            <li>Interface premium et raffinée</li>
+                            <li>Système de réservation en ligne</li>
+                            <li>Galerie de services interactive</li>
+                            <li>Espace client personnalisé</li>
+                            <li>Integration de paiement sécurisé</li>
+                        </ul>
+                    </div>
+                    <div class="popup-tech">
+                        <h4>Technologies</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Hebergement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Brebis Brigasque -->
+    <div id="modal-brebis" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closeModal('brebis')">&times;</button>
+            
+            <!-- Header with wallpaper -->
+            <div class="popup-header">
+                <div class="popup-wallpaper" style="background-image: url('portfolio/brebis-wall.png');">
+                    <h2 class="popup-title">Brebis Brigasque</h2>
+                </div>
+            </div>
+            
+            <!-- Logo positioned outside header -->
+            <div class="popup-logo">
+                <img src="portfolio/brebis.png" alt="Brebis Brigasque Logo">
+            </div>
+            
+            <!-- Content section -->
+            <div class="popup-body">
+                <div class="popup-main-content">
+                    <h3>À propos du projet</h3>
+                    <p class="popup-description">
+                        Site web authentique dédié à la valorisation de la race ovine Brigasque et de ses produits artisanaux. 
+                        Design chaleureux mettant en valeur le patrimoine agricole et les traditions locales.
+                    </p>
+                    <p class="popup-link">
+                        <a href="https://brebisbrigasque.fr/" target="_blank" rel="noopener noreferrer">brebis-brigasque</a>
+                    </p>
+                </div>
+                
+                <div class="popup-sidebar">
+                    <div class="popup-features">
+                        <h4>Fonctionnalités</h4>
+                        <ul>
+                            <li>Galerie photo interactive</li>
+                            <li>Boutique en ligne intégrée</li>
+                            <li>Blog et actualités</li>
+                            <li>Carte des éleveurs partenaires</li>
+                            <li>Système de commande personnalisé</li>
+                        </ul>
+                    </div>
+                    <div class="popup-tech">
+                        <h4>Technologies</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">WordPress</span>
+                            <span class="tech-tag">PHP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

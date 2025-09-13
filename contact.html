@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Rémi Sarro | Développeur Web & QA Engineer</title>
+    <meta name="description" content="Contactez Rémi Sarro pour vos projets de développement web. Formulaire de contact, email, téléphone et réseaux sociaux.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" type="image/png" href="logo/web-designer.png">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="accueil.html" class="logo">
+                <img src="logo/web-designer.png" alt="Logo Rémi Sarro" class="logo-img">
+                Rémi Sarro
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="accueil.html" class="nav-link">Accueil</a></li>
+                <li><a href="apropos.html" class="nav-link">À propos</a></li>
+                <li><a href="competences.html" class="nav-link">Compétences</a></li>
+                <li><a href="projets.html" class="nav-link">Projets</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="contact-hero section">
+            <div class="container">
+                <div class="contact-hero-content fade-in-up">
+                    <h1>Contactez-moi</h1>
+                    <p class="hero-subtitle">
+                        Prêt à décoller ensemble ? Parlons de votre projet et transformons vos idées en réalité digitale
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-main section" id="contact-form">
+            <div class="container">
+                <div class="contact-content">
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper fade-in-left">
+                        <div class="contact-form-header">
+                            <h2>Envoyez-moi un message</h2>
+                            <p>Décrivez-moi votre projet et je vous recontacterai dans les plus brefs délais.</p>
+                        </div>
+                        
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Nom complet *</label>
+                                <input type="text" id="name" name="name" required>
+                                <span class="form-error" id="nameError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="form-error" id="emailError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Sujet</label>
+                                <select id="subject" name="subject">
+                                    <option value="">Sélectionnez un sujet</option>
+                                    <option value="site-vitrine">Site vitrine</option>
+                                    <option value="application-web">Application web</option>
+                                    <option value="ecommerce">E-commerce</option>
+                                    <option value="qa-testing">QA & Testing</option>
+                                    <option value="maintenance">Maintenance</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" placeholder="Décrivez votre projet, vos besoins, votre budget approximatif..." required></textarea>
+                                <span class="form-error" id="messageError"></span>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="privacy" name="privacy" required>
+                                    <span class="checkmark"></span>
+                                    J'accepte que mes données soient utilisées pour me recontacter concernant ma demande *
+                                </label>
+                                <span class="form-error" id="privacyError"></span>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span class="btn-text">Envoyer le message</span>
+                                <span class="btn-loading" style="display: none;">Envoi en cours...</span>
+                            </button>
+                        </form>
+                        
+                        <div class="form-success" id="formSuccess" style="display: none;">
+                            <div class="success-icon">✓</div>
+                            <h3>Message envoyé avec succès !</h3>
+                            <p>Merci pour votre message. Je vous recontacterai dans les plus brefs délais.</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info fade-in-right" id="contact-info">
+                        <div class="contact-card">
+                            <h3>Informations de contact</h3>
+                            <div class="contact-item">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <a href="mailto:remi.sarro@gmail.com">remi.sarro@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">📞</div>
+                                <div class="contact-details">
+                                    <h4>Téléphone</h4>
+                                    <a href="tel:+33685139774">+33 6 85 13 97 74</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">📍</div>
+                                <div class="contact-details">
+                                    <h4>Localisation</h4>
+                                    <p>France, disponible en remote</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">⏰</div>
+                                <div class="contact-details">
+                                    <h4>Disponibilité</h4>
+                                    <p>Lun - Ven : 9h - 18h<br>Réponse sous 24h</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-card">
+                            <h3>Réseaux sociaux</h3>
+                            <div class="social-links-contact">
+                                <a href="https://www.linkedin.com/in/r%C3%A9mi-sarro-3b72231b8/" class="social-link-contact" target="_blank">
+                                    <div class="social-icon">💼</div>
+                                    <div class="social-info">
+                                        <h4>LinkedIn</h4>
+                                        <p>Profil professionnel</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="https://github.com/remi-sarro" class="social-link-contact" target="_blank">
+                                    <div class="social-icon">💻</div>
+                                    <div class="social-info">
+                                        <h4>GitHub</h4>
+                                        <p>Mes projets code</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="cv/Rémi Sarro_CDI_Neutre_Mai.pdf" class="social-link-contact" download>
+                                    <div class="social-icon">📄</div>
+                                    <div class="social-info">
+                                        <h4>CV</h4>
+                                        <p>Télécharger mon CV</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section section">
+            <div class="container">
+                <div class="section-title fade-in-up">
+                    <h2>Questions fréquentes</h2>
+                </div>
+                
+                <div class="faq-grid">
+                    <div class="faq-item fade-in-up">
+                        <h3>Quels types de projets réalisez-vous ?</h3>
+                        <p>Je développe des sites vitrines, applications web, plateformes e-commerce et propose des services de QA testing. Chaque projet est adapté aux besoins spécifiques du client.</p>
+                    </div>
+                    
+                    <div class="faq-item fade-in-up">
+                        <h3>Quel est votre processus de travail ?</h3>
+                        <p>Je commence par analyser vos besoins, puis je propose une solution technique adaptée. Le développement se fait de manière itérative avec des points réguliers pour valider l'avancement.</p>
+                    </div>
+                    
+                    <div class="faq-item fade-in-up">
+                        <h3>Combien de temps prend un projet ?</h3>
+                        <p>Cela dépend de la complexité : 2-4 semaines pour un site vitrine, 1-3 mois pour une application web complète. Je fournis toujours un planning détaillé en amont.</p>
+                    </div>
+                    
+                    <div class="faq-item fade-in-up">
+                        <h3>Proposez-vous de la maintenance ?</h3>
+                        <p>Oui, je propose des contrats de maintenance pour assurer la sécurité, les mises à jour et le bon fonctionnement de votre site sur le long terme.</p>
+                    </div>
+                    
+                    <div class="faq-item fade-in-up">
+                        <h3>Travaillez-vous en remote ?</h3>
+                        <p>Absolument ! Je travaille principalement en remote, ce qui me permet d'accompagner des clients partout en France et à l'international.</p>
+                    </div>
+                    
+                    <div class="faq-item fade-in-up">
+                        <h3>Je pourrais faire mon site seul avec wix?</h3>
+                        <p>Tu pourrais, mais les sites créés avec Wix sont souvent limités en personnalisation, en performance et en référencement. Un développeur garantit un site unique, optimisé et évolutif, adapté à tes besoins précis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content fade-in-up">
+                    <h2>Prêt à décoller ?</h2>
+                    <p>Votre projet mérite une attention particulière. Discutons-en ensemble !</p>
+                    <div class="cta-buttons">
+                        <a href="#contact-form" class="btn btn-primary">Envoyer un email</a>
+                        <a href="#contact-info" class="btn btn-outline">Appeler maintenant</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><a href="accueil.html">Rémi Sarro</a></h3>
+                    <p>Développeur web & QA Engineer</p>
+                    <p>Transformant les idées en solutions web innovantes</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <div class="footer-nav-columns">
+                        <div class="footer-nav-col">
+                            <a href="apropos.html">À propos</a>
+                            <a href="competences.html">Compétences</a>
+                        </div>
+                        <div class="footer-nav-col">
+                            <a href="projets.html">Projets</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <a href="mailto:remi.sarro@gmail.com">remi.sarro@gmail.com</a><br>
+                    <a href="tel:+33685139774">+33 6 85 13 97 74</a>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/r%C3%A9mi-sarro-3b72231b8/" class="social-link" target="_blank">
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/remi-sarro" class="social-link" target="_blank">
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Rémi Sarro. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
