@@ -103,6 +103,7 @@
     background: var(--background-light);
     border-radius: 10px;
     overflow: hidden;
+    margin-bottom: 1rem;
 }
 
 .skill-progress {
@@ -354,6 +355,7 @@
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 1rem;
+    display: none;
 }
 
 .language-progress {
@@ -362,6 +364,7 @@
     border-radius: 10px;
     width: 0;
     transition: width 2s ease;
+    display: none;
 }
 
 .language-description {
@@ -480,6 +483,12 @@
     
     .skills-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    .istqb-certification {
+        justify-content: center;
+        margin-top: 2rem;
+        margin-right: 0rem;
     }
 }
 

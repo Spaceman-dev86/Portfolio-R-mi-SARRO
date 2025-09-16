@@ -2,8 +2,12 @@
 
 // Initialize EmailJS
 (function() {
-    // Initialize EmailJS with your public key
-    emailjs.init("XcOFld8QJMyBHJlLC");
+    // Initialize EmailJS with your public key only if EmailJS is loaded
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init("XcOFld8QJMyBHJlLC");
+    } else {
+        console.warn('EmailJS not loaded - contact form will not work');
+    }
 })();
 
 // DOM Content Loaded Event
@@ -28,9 +32,10 @@ function initNavigation() {
 
     // Mobile menu toggle
     if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
+        navToggle.addEventListener('click', function(e) {
+            e.preventDefault();
             navMenu.classList.toggle('show-menu');
-            navToggle.classList.toggle('active');
+            navToggle.classList.toggle('show-menu');
         });
     }
 
@@ -38,7 +43,7 @@ function initNavigation() {
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             navMenu.classList.remove('show-menu');
-            navToggle.classList.remove('active');
+            navToggle.classList.remove('show-menu');
         });
     });
 

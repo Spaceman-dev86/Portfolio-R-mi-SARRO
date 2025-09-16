@@ -354,33 +354,33 @@
         text-align: center;
     }
     
-    .hero-text {
-        padding-right: 0;
-        order: 2;
-    }
-    
     .hero-image {
-        order: 1;
+        order: -1;
     }
     
-    .profile-image {
-        width: 300px;
-        height: 300px;
+    .hero-image-wrapper {
+        max-width: 300px;
+        margin: 0 auto;
     }
     
-    .hero-decoration {
-        width: 350px;
-        height: 350px;
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
     
     .quick-about-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 3rem;
         text-align: center;
     }
     
     .quick-about-stats {
         grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .scroll-indicator {
+        display: none;
     }
 }
 
