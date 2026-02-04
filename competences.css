@@ -77,6 +77,11 @@
     color: #323330;
 }
 
+.react-logo {
+    background: linear-gradient(135deg, #61dafb, #00bcd4);
+    color: #0b1f2a;
+}
+
 .python-logo {
     background: linear-gradient(135deg, #3776ab, #4b8bbe);
 }
