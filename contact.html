@@ -20,12 +20,29 @@
             </a>
             
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="nav-link">Accueil</a></li>
-                <li><a href="apropos.html" class="nav-link">À propos</a></li>
-                <li><a href="competences.html" class="nav-link">Compétences</a></li>
-                <li><a href="projets.html" class="nav-link">Projets</a></li>
-                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="apropos.html" class="nav-link" data-i18n="nav.about">À propos</a></li>
+                <li><a href="competences.html" class="nav-link" data-i18n="nav.skills">Compétences</a></li>
+                <li><a href="projets.html" class="nav-link" data-i18n="nav.projects">Projets</a></li>
+                <li><a href="contact.html" class="nav-link active" data-i18n="nav.contact">Contact</a></li>
             </ul>
+
+            <div class="lang-switcher" id="lang-switcher">
+                <button class="lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="lang-code">FR</span>
+                    <span class="lang-chevron" aria-hidden="true">▾</span>
+                </button>
+                <div class="lang-menu" role="listbox" aria-label="Choisir la langue">
+                    <button class="lang-option" type="button" role="option" data-lang="fr" aria-selected="true">
+                        <span class="lang-flag" aria-hidden="true">🇫🇷</span>
+                        <span>Français</span>
+                    </button>
+                    <button class="lang-option" type="button" role="option" data-lang="en" aria-selected="false">
+                        <span class="lang-flag" aria-hidden="true">🇬🇧</span>
+                        <span>English</span>
+                    </button>
+                </div>
+            </div>
             
             <div class="nav-toggle" id="nav-toggle">
                 <span></span>
@@ -41,8 +58,8 @@
         <section class="contact-hero section">
             <div class="container">
                 <div class="contact-hero-content fade-in-up">
-                    <h1>Contactez-moi</h1>
-                    <p class="hero-subtitle">
+                    <h1 data-i18n="contact.title">Contactez-moi</h1>
+                    <p class="hero-subtitle" data-i18n="contact.subtitle">
                         Prêt à décoller ensemble ? Parlons de votre projet et transformons vos idées en réalité digitale
                     </p>
                 </div>
@@ -56,39 +73,39 @@
                     <!-- Contact Form -->
                     <div class="contact-form-wrapper fade-in-left">
                         <div class="contact-form-header">
-                            <h2>Envoyez-moi un message</h2>
-                            <p>Décrivez-moi votre projet et je vous recontacterai dans les plus brefs délais.</p>
+                            <h2 data-i18n="contact.formTitle">Envoyez-moi un message</h2>
+                            <p data-i18n="contact.formIntro">Décrivez-moi votre projet et je vous recontacterai dans les plus brefs délais.</p>
                         </div>
                         
                         <form class="contact-form" id="contactForm">
                             <div class="form-group">
-                                <label for="name">Nom complet *</label>
+                                <label for="name" data-i18n="contact.fullName">Nom complet *</label>
                                 <input type="text" id="name" name="name" required>
                                 <span class="form-error" id="nameError"></span>
                             </div>
                             
                             <div class="form-group">
-                                <label for="email">Email *</label>
+                                <label for="email" data-i18n="contact.email">Email *</label>
                                 <input type="email" id="email" name="email" required>
                                 <span class="form-error" id="emailError"></span>
                             </div>
                             
                             <div class="form-group">
-                                <label for="subject">Sujet</label>
+                                <label for="subject" data-i18n="contact.subject">Sujet</label>
                                 <select id="subject" name="subject">
-                                    <option value="">Sélectionnez un sujet</option>
-                                    <option value="site-vitrine">Site vitrine</option>
-                                    <option value="application-web">Application web</option>
-                                    <option value="ecommerce">E-commerce</option>
-                                    <option value="qa-testing">QA & Testing</option>
-                                    <option value="maintenance">Maintenance</option>
-                                    <option value="autre">Autre</option>
+                                    <option value="" data-i18n="contact.subjectPlaceholder">Sélectionnez un sujet</option>
+                                    <option value="site-vitrine" data-i18n="contact.subject.showcase">Site vitrine</option>
+                                    <option value="application-web" data-i18n="contact.subject.webapp">Application web</option>
+                                    <option value="ecommerce" data-i18n="contact.subject.ecommerce">E-commerce</option>
+                                    <option value="qa-testing" data-i18n="contact.subject.qa">QA & Testing</option>
+                                    <option value="maintenance" data-i18n="contact.subject.maintenance">Maintenance</option>
+                                    <option value="autre" data-i18n="contact.subject.other">Autre</option>
                                 </select>
                             </div>
                             
                             <div class="form-group">
-                                <label for="message">Message *</label>
-                                <textarea id="message" name="message" rows="6" placeholder="Décrivez votre projet, vos besoins, votre budget approximatif..." required></textarea>
+                                <label for="message" data-i18n="contact.message">Message *</label>
+                                <textarea id="message" name="message" rows="6" placeholder="Décrivez votre projet, vos besoins, votre budget approximatif..." data-i18n="contact.messagePlaceholder" data-i18n-attr="placeholder" required></textarea>
                                 <span class="form-error" id="messageError"></span>
                             </div>
                             
@@ -96,28 +113,28 @@
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="privacy" name="privacy" required>
                                     <span class="checkmark"></span>
-                                    J'accepte que mes données soient utilisées pour me recontacter concernant ma demande *
+                                    <span data-i18n="contact.privacy">J'accepte que mes données soient utilisées pour me recontacter concernant ma demande *</span>
                                 </label>
                                 <span class="form-error" id="privacyError"></span>
                             </div>
                             
                             <button type="submit" class="btn btn-primary btn-submit">
-                                <span class="btn-text">Envoyer le message</span>
-                                <span class="btn-loading" style="display: none;">Envoi en cours...</span>
+                                <span class="btn-text" data-i18n="contact.send">Envoyer le message</span>
+                                <span class="btn-loading" style="display: none;" data-i18n="contact.sending">Envoi en cours...</span>
                             </button>
                         </form>
                         
                         <div class="form-success" id="formSuccess" style="display: none;">
                             <div class="success-icon">✓</div>
-                            <h3>Message envoyé avec succès !</h3>
-                            <p>Merci pour votre message. Je vous recontacterai dans les plus brefs délais.</p>
+                            <h3 data-i18n="contact.successTitle">Message envoyé avec succès !</h3>
+                            <p data-i18n="contact.successText">Merci pour votre message. Je vous recontacterai dans les plus brefs délais.</p>
                         </div>
                     </div>
 
                     <!-- Contact Info -->
                     <div class="contact-info fade-in-right" id="contact-info">
                         <div class="contact-card">
-                            <h3>Informations de contact</h3>
+                            <h3 data-i18n="contact.contactInfo">Informations de contact</h3>
                             <div class="contact-item">
                                 <div class="contact-icon">📧</div>
                                 <div class="contact-details">
@@ -129,7 +146,7 @@
                             <div class="contact-item">
                                 <div class="contact-icon">📞</div>
                                 <div class="contact-details">
-                                    <h4>Téléphone</h4>
+                                    <h4 data-i18n="contact.phone">Téléphone</h4>
                                     <a href="tel:+33685139774">+33 6 85 13 97 74</a>
                                 </div>
                             </div>
@@ -137,28 +154,28 @@
                             <div class="contact-item">
                                 <div class="contact-icon">📍</div>
                                 <div class="contact-details">
-                                    <h4>Localisation</h4>
-                                    <p>France, disponible en remote</p>
+                                    <h4 data-i18n="contact.location">Localisation</h4>
+                                    <p data-i18n="contact.locationText">France, disponible en remote</p>
                                 </div>
                             </div>
                             
                             <div class="contact-item">
                                 <div class="contact-icon">⏰</div>
                                 <div class="contact-details">
-                                    <h4>Disponibilité</h4>
-                                    <p>Lun - Ven : 9h - 18h<br>Réponse sous 24h</p>
+                                    <h4 data-i18n="contact.availability">Disponibilité</h4>
+                                    <p data-i18n="contact.availabilityText">Lun - Ven : 9h - 18h<br>Réponse sous 24h</p>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="social-card">
-                            <h3>Réseaux sociaux</h3>
+                            <h3 data-i18n="contact.socialTitle">Réseaux sociaux</h3>
                             <div class="social-links-contact">
                                 <a href="https://www.linkedin.com/in/r%C3%A9mi-sarro-3b72231b8/" class="social-link-contact" target="_blank">
                                     <div class="social-icon">💼</div>
                                     <div class="social-info">
                                         <h4>LinkedIn</h4>
-                                        <p>Profil professionnel</p>
+                                        <p data-i18n="contact.socialLinkedin">Profil professionnel</p>
                                     </div>
                                 </a>
                                 
@@ -166,7 +183,7 @@
                                     <div class="social-icon">💻</div>
                                     <div class="social-info">
                                         <h4>GitHub</h4>
-                                        <p>Mes projets code</p>
+                                        <p data-i18n="contact.socialGithub">Mes projets code</p>
                                     </div>
                                 </a>
                                 
@@ -174,7 +191,7 @@
                                     <div class="social-icon">📄</div>
                                     <div class="social-info">
                                         <h4>CV</h4>
-                                        <p>Télécharger mon CV</p>
+                                        <p data-i18n="contact.socialCv">Télécharger mon CV</p>
                                     </div>
                                 </a>
                             </div>
@@ -188,38 +205,38 @@
         <section class="faq-section section">
             <div class="container">
                 <div class="section-title fade-in-up">
-                    <h2>Questions fréquentes</h2>
+                    <h2 data-i18n="contact.faqTitle">Questions fréquentes</h2>
                 </div>
                 
                 <div class="faq-grid">
                     <div class="faq-item fade-in-up">
-                        <h3>Quels types de projets réalisez-vous ?</h3>
-                        <p>Je développe des sites vitrines, applications web, plateformes e-commerce et propose des services de QA testing. Chaque projet est adapté aux besoins spécifiques du client.</p>
+                        <h3 data-i18n="contact.faq1Q">Quels types de projets réalisez-vous ?</h3>
+                        <p data-i18n="contact.faq1A">Je développe des sites vitrines, applications web, plateformes e-commerce et propose des services de QA testing. Chaque projet est adapté aux besoins spécifiques du client.</p>
                     </div>
                     
                     <div class="faq-item fade-in-up">
-                        <h3>Quel est votre processus de travail ?</h3>
-                        <p>Je commence par analyser vos besoins, puis je propose une solution technique adaptée. Le développement se fait de manière itérative avec des points réguliers pour valider l'avancement.</p>
+                        <h3 data-i18n="contact.faq2Q">Quel est votre processus de travail ?</h3>
+                        <p data-i18n="contact.faq2A">Je commence par analyser vos besoins, puis je propose une solution technique adaptée. Le développement se fait de manière itérative avec des points réguliers pour valider l'avancement.</p>
                     </div>
                     
                     <div class="faq-item fade-in-up">
-                        <h3>Combien de temps prend un projet ?</h3>
-                        <p>Cela dépend de la complexité : 2-4 semaines pour un site vitrine, 1-3 mois pour une application web complète. Je fournis toujours un planning détaillé en amont.</p>
+                        <h3 data-i18n="contact.faq3Q">Combien de temps prend un projet ?</h3>
+                        <p data-i18n="contact.faq3A">Cela dépend de la complexité : 2-4 semaines pour un site vitrine, 1-3 mois pour une application web complète. Je fournis toujours un planning détaillé en amont.</p>
                     </div>
                     
                     <div class="faq-item fade-in-up">
-                        <h3>Proposez-vous de la maintenance ?</h3>
-                        <p>Oui, je propose des contrats de maintenance pour assurer la sécurité, les mises à jour et le bon fonctionnement de votre site sur le long terme.</p>
+                        <h3 data-i18n="contact.faq4Q">Proposez-vous de la maintenance ?</h3>
+                        <p data-i18n="contact.faq4A">Oui, je propose des contrats de maintenance pour assurer la sécurité, les mises à jour et le bon fonctionnement de votre site sur le long terme.</p>
                     </div>
                     
                     <div class="faq-item fade-in-up">
-                        <h3>Travaillez-vous en remote ?</h3>
-                        <p>Absolument ! Je travaille principalement en remote, ce qui me permet d'accompagner des clients partout en France et à l'international.</p>
+                        <h3 data-i18n="contact.faq5Q">Travaillez-vous en remote ?</h3>
+                        <p data-i18n="contact.faq5A">Absolument ! Je travaille principalement en remote, ce qui me permet d'accompagner des clients partout en France et à l'international.</p>
                     </div>
                     
                     <div class="faq-item fade-in-up">
-                        <h3>Je pourrais faire mon site seul avec wix?</h3>
-                        <p>Tu pourrais, mais les sites créés avec Wix sont souvent limités en personnalisation, en performance et en référencement. Un développeur garantit un site unique, optimisé et évolutif, adapté à tes besoins précis.</p>
+                        <h3 data-i18n="contact.faq6Q">Je pourrais faire mon site seul avec wix?</h3>
+                        <p data-i18n="contact.faq6A">Tu pourrais, mais les sites créés avec Wix sont souvent limités en personnalisation, en performance et en référencement. Un développeur garantit un site unique, optimisé et évolutif, adapté à tes besoins précis.</p>
                     </div>
                 </div>
             </div>
@@ -229,11 +246,11 @@
         <section class="cta-section">
             <div class="container">
                 <div class="cta-content fade-in-up">
-                    <h2>Prêt à décoller ?</h2>
-                    <p>Votre projet mérite une attention particulière. Discutons-en ensemble !</p>
+                    <h2 data-i18n="contact.ctaTitle">Prêt à décoller ?</h2>
+                    <p data-i18n="contact.ctaText">Votre projet mérite une attention particulière. Discutons-en ensemble !</p>
                     <div class="cta-buttons">
-                        <a href="#contact-form" class="btn btn-primary">Envoyer un email</a>
-                        <a href="#contact-info" class="btn btn-outline">Appeler maintenant</a>
+                        <a href="#contact-form" class="btn btn-primary" data-i18n="contact.ctaEmail">Envoyer un email</a>
+                        <a href="#contact-info" class="btn btn-outline" data-i18n="contact.ctaCall">Appeler maintenant</a>
                     </div>
                 </div>
             </div>
@@ -246,26 +263,26 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><a href="index.html">Rémi Sarro</a></h3>
-                    <p>Chef de projet & Développeur web</p>
-                    <p>Transformant les idées en solutions web innovantes</p>
+                    <p data-i18n="home.footerRole">Chef de projet & Développeur web</p>
+                    <p data-i18n="home.footerMission">Transformant les idées en solutions web innovantes</p>
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Navigation</h3>
+                    <h3 data-i18n="footer.navigation">Navigation</h3>
                     <div class="footer-nav-columns">
                         <div class="footer-nav-col">
-                            <a href="apropos.html">À propos</a>
-                            <a href="competences.html">Compétences</a>
+                            <a href="apropos.html" data-i18n="nav.about">À propos</a>
+                            <a href="competences.html" data-i18n="nav.skills">Compétences</a>
                         </div>
                         <div class="footer-nav-col">
-                            <a href="projets.html">Projets</a>
-                            <a href="contact.html">Contact</a>
+                            <a href="projets.html" data-i18n="nav.projects">Projets</a>
+                            <a href="contact.html" data-i18n="nav.contact">Contact</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Contact</h3>
+                    <h3 data-i18n="footer.contact">Contact</h3>
                     <a href="mailto:remi.sarro@gmail.com">remi.sarro@gmail.com</a><br>
                     <a href="tel:+33685139774">+33 6 85 13 97 74</a>
                     <div class="social-links">
@@ -280,7 +297,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Rémi Sarro. Tous droits réservés.</p>
+                <p>&copy; 2024 Rémi Sarro. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
             </div>
         </div>
     </footer>

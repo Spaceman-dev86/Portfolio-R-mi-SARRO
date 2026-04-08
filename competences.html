@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compétences - Rémi Sarro | Technologies Web & QA</title>
-    <meta name="description" content="Découvrez les compétences techniques de Rémi Sarro : HTML, CSS, JavaScript, Python, QA et anglais courant. Expertise en développement web moderne.">
+    <meta name="description" content="Découvrez les compétences de Rémi Sarro : site vitrine, site e-commerce, application web et création graphique. Expertise en développement web moderne.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="competences.css">
     <link rel="icon" type="image/png" href="logo/web-designer.png">
@@ -19,12 +19,29 @@
             </a>
             
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="nav-link">Accueil</a></li>
-                <li><a href="apropos.html" class="nav-link">À propos</a></li>
-                <li><a href="competences.html" class="nav-link active">Compétences</a></li>
-                <li><a href="projets.html" class="nav-link">Projets</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="apropos.html" class="nav-link" data-i18n="nav.about">À propos</a></li>
+                <li><a href="competences.html" class="nav-link active" data-i18n="nav.skills">Compétences</a></li>
+                <li><a href="projets.html" class="nav-link" data-i18n="nav.projects">Projets</a></li>
+                <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
             </ul>
+
+            <div class="lang-switcher" id="lang-switcher">
+                <button class="lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="lang-code">FR</span>
+                    <span class="lang-chevron" aria-hidden="true">▾</span>
+                </button>
+                <div class="lang-menu" role="listbox" aria-label="Choisir la langue">
+                    <button class="lang-option" type="button" role="option" data-lang="fr" aria-selected="true">
+                        <span class="lang-flag" aria-hidden="true">🇫🇷</span>
+                        <span>Français</span>
+                    </button>
+                    <button class="lang-option" type="button" role="option" data-lang="en" aria-selected="false">
+                        <span class="lang-flag" aria-hidden="true">🇬🇧</span>
+                        <span>English</span>
+                    </button>
+                </div>
+            </div>
             
             <div class="nav-toggle" id="nav-toggle">
                 <span></span>
@@ -40,8 +57,8 @@
         <section class="skills-hero section">
             <div class="container">
                 <div class="skills-hero-content fade-in-up">
-                    <h1>Mes compétences</h1>
-                    <p class="hero-subtitle">
+                    <h1 data-i18n="skills.title">Mes compétences</h1>
+                    <p class="hero-subtitle" data-i18n="skills.subtitle">
                         Un arsenal technologique complet pour propulser vos projets vers les étoiles
                     </p>
                 </div>
@@ -52,104 +69,82 @@
         <section class="technical-skills section">
             <div class="container">
                 <div class="section-title fade-in-up">
-                    <h2>Compétences techniques</h2>
+                    <h2 data-i18n="skills.technicalTitle">Compétences techniques</h2>
                 </div>
                 
                 <div class="skills-grid">
-                    <!-- HTML -->
+                    <!-- Site vitrine -->
                     <div class="skill-card fade-in-up">
                         <div class="skill-icon">
-                            <div class="skill-logo html-logo">HTML5</div>
+                            <div class="skill-logo html-logo">VITRINE</div>
                         </div>
                         <div class="skill-content">
-                            <h3>HTML5</h3>
-                            <p>
-                                Maîtrise avancée du HTML5 sémantique, accessibilité web, 
-                                et intégration des dernières spécifications W3C.
+                            <h3 data-i18n="skills.showcaseTitle">Site vitrine</h3>
+                            <p data-i18n="skills.showcaseDesc">
+                                Création de sites vitrine modernes pour présenter une activité, inspirer confiance
+                                et convertir avec une navigation claire.
                             </p>
                             <div class="skill-tags">
-                                <span class="skill-tag">Sémantique</span>
-                                <span class="skill-tag">Accessibilité</span>
                                 <span class="skill-tag">SEO</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CSS -->
-                    <div class="skill-card fade-in-up">
-                        <div class="skill-icon">
-                            <div class="skill-logo css-logo">CSS3</div>
-                        </div>
-                        <div class="skill-content">
-                            <h3>CSS3</h3>
-                            <p>
-                                Expertise en CSS3 moderne, Flexbox, Grid, animations, 
-                                et responsive design pour tous types d'écrans.
-                            </p>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Flexbox</span>
-                                <span class="skill-tag">Grid</span>
-                                <span class="skill-tag">Animations</span>
+                                <span class="skill-tag">Performance</span>
                                 <span class="skill-tag">Responsive</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- JavaScript -->
+                    <!-- Site e-commerce -->
                     <div class="skill-card fade-in-up">
                         <div class="skill-icon">
-                            <div class="skill-logo js-logo">JS</div>
+                            <div class="skill-logo css-logo">SHOP</div>
                         </div>
                         <div class="skill-content">
-                            <h3>JavaScript</h3>
-                            <p>
-                                Développement JavaScript moderne (ES6+), manipulation DOM, 
-                                APIs, programmation asynchrone et frameworks.
+                            <h3 data-i18n="skills.ecommerceTitle">Site e-commerce</h3>
+                            <p data-i18n="skills.ecommerceDesc">
+                                Mise en place de boutiques en ligne orientées conversion : catalogue, fiches produit,
+                                parcours d’achat fluide et expérience mobile soignée.
                             </p>
                             <div class="skill-tags">
-                                <span class="skill-tag">ES6+</span>
-                                <span class="skill-tag">DOM</span>
-                                <span class="skill-tag">APIs</span>
-                                <span class="skill-tag">Async/Await</span>
+                                <span class="skill-tag">UX</span>
+                                <span class="skill-tag">Conversion</span>
+                                <span class="skill-tag">Responsive</span>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Application web -->
                     <div class="skill-card fade-in-up">
                         <div class="skill-icon">
-                            <div class="skill-logo react-logo">REACT</div>
+                            <div class="skill-logo js-logo">APP</div>
                         </div>
                         <div class="skill-content">
-                            <h3>React</h3>
-                            <p>
-                                Développement d'interfaces modernes avec des composants réutilisables, 
-                                gestion de l'état et intégration d'APIs pour créer des applications web 
-                                rapides, maintenables et orientées expérience utilisateur.
+                            <h3 data-i18n="skills.webappTitle">Application web</h3>
+                            <p data-i18n="skills.webappDesc">
+                                Développement d’applications web interactives : interfaces dynamiques, intégration d’API
+                                et logique métier pour des outils utiles au quotidien.
                             </p>
                             <div class="skill-tags">
-                                <span class="skill-tag">Components</span>
-                                <span class="skill-tag">Hooks</span>
-                                <span class="skill-tag">State management</span>
-                                <span class="skill-tag">API Integration</span>
+                                <span class="skill-tag">API</span>
+                                <span class="skill-tag">UI</span>
+                                <span class="skill-tag">Automatisation</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Python -->
+                    <!-- Création graphique -->
                     <div class="skill-card fade-in-up">
                         <div class="skill-icon">
-                            <div class="skill-logo python-logo">PY</div>
+                            <div class="skill-logo react-logo">DESIGN</div>
                         </div>
                         <div class="skill-content">
-                            <h3>Python</h3>
-                            <p>
-                                Programmation Python pour le web, automatisation, 
-                                scripts de test et développement backend.
+                            <h3 data-i18n="skills.designTitle">Création graphique</h3>
+                            <p data-i18n="skills.designDesc">
+                                Conception d’éléments visuels pour renforcer l’identité : maquettes, bannières,
+                                visuels web et cohérence graphique globale.
                             </p>
                             <div class="skill-tags">
-                                <span class="skill-tag">Web Development</span>
-                                <span class="skill-tag">Automation</span>
-                                <span class="skill-tag">Testing</span>
+                                <span class="skill-tag">UI</span>
+                                <span class="skill-tag">Branding</span>
+                                <span class="skill-tag">Maquettes</span>
                             </div>
                         </div>
                     </div>
@@ -161,30 +156,30 @@
         <section class="qa-skills section">
             <div class="container">
                 <div class="section-title fade-in-up">
-                    <h2>Chef de projet / PO</h2>
+                    <h2 data-i18n="skills.pmTitle">Chef de projet / PO</h2>
                 </div>
                 
                 <div class="qa-content">
                     <div class="qa-text fade-in-left">
-                        <h3>Expérience projet (automobile & aéronautique)</h3>
-                        <p>
+                        <h3 data-i18n="skills.pmExpTitle">Expérience projet (automobile & aéronautique)</h3>
+                        <p data-i18n="skills.pmExpText">
                             J'ai 3 ans d'expérience en gestion de projet dans l'automobile et l'aéronautique,
                             deux environnements aux méthodes de travail très différentes.
                             J'ai su m'adapter rapidement aux contraintes, aux process et aux rythmes propres à chaque secteur,
                             tout en gardant le cap sur les objectifs, la qualité et les délais.
                         </p>
                         <ul class="qa-list">
-                            <li>Pilotage projet et coordination multi-métiers</li>
-                            <li>Recueil du besoin, priorisation et suivi des actions</li>
-                            <li>Animation de rituels (suivi, points d'avancement)</li>
-                            <li>Gestion des risques, arbitrages et reporting</li>
-                            <li>Culture résultat : qualité, coût, délai</li>
-                            <li>Adaptation aux méthodes et outils de chaque organisation</li>
+                            <li data-i18n="skills.pmBullet1">Pilotage projet et coordination multi-métiers</li>
+                            <li data-i18n="skills.pmBullet2">Recueil du besoin, priorisation et suivi des actions</li>
+                            <li data-i18n="skills.pmBullet3">Animation de rituels (suivi, points d'avancement)</li>
+                            <li data-i18n="skills.pmBullet4">Gestion des risques, arbitrages et reporting</li>
+                            <li data-i18n="skills.pmBullet5">Culture résultat : qualité, coût, délai</li>
+                            <li data-i18n="skills.pmBullet6">Adaptation aux méthodes et outils de chaque organisation</li>
                         </ul>
                     </div>
                     
                     <div class="qa-tools fade-in-right">
-                        <h4>Outils & pratiques</h4>
+                        <h4 data-i18n="skills.toolsPractices">Outils & pratiques</h4>
                         <div class="tools-grid">
                             <div class="tool-item">
                                 <div class="tool-icon">🔧</div>
@@ -220,12 +215,12 @@
         <section class="tools-section section">
             <div class="container">
                 <div class="section-title fade-in-up">
-                    <h2>Outils & Technologies</h2>
+                    <h2 data-i18n="skills.toolsTech">Outils & Technologies</h2>
                 </div>
                 
                 <div class="tools-categories">
                     <div class="tool-category fade-in-up">
-                        <h3>Développement web</h3>
+                        <h3 data-i18n="skills.webDev">Développement web</h3>
                         <div class="category-tools">
                             <span class="tool-badge">VS Code</span>
                             <span class="tool-badge">Git</span>
@@ -237,17 +232,17 @@
                     </div>
                     
                     <div class="tool-category fade-in-up">
-                        <h3>Chef de projet</h3>
+                        <h3 data-i18n="skills.pm">Chef de projet</h3>
                         <div class="category-tools">
                             <span class="tool-badge">MS Project</span>
-                            <span class="tool-badge">Méthode Agile</span>
+                            <span class="tool-badge">Agile</span>
                             <span class="tool-badge">Excel VBA</span>
                             <span class="tool-badge">Communication</span>
                         </div>
                     </div>
                     
                     <div class="tool-category fade-in-up">
-                        <h3>Autres</h3>
+                        <h3 data-i18n="skills.other">Autres</h3>
                         <div class="category-tools">
                             <span class="tool-badge">Wordpress</span>
                             <span class="tool-badge">Jira</span> <br>
@@ -264,14 +259,14 @@
         <section class="language-skills section">
             <div class="container">
                 <div class="section-title fade-in-up">
-                    <h2>Compétences linguistiques</h2>
+                    <h2 data-i18n="skills.languagesTitle">Compétences linguistiques</h2>
                 </div>
                 
                 <div class="languages-grid">
                     <div class="language-card fade-in-up">
                         <div class="language-flag">🇫🇷</div>
-                        <h3>Français</h3>
-                        <div class="language-level">Langue maternelle</div>
+                        <h3 data-i18n="skills.french">Français</h3>
+                        <div class="language-level" data-i18n="skills.native">Langue maternelle</div>
                         <div class="language-bar">
                             <div class="language-progress" data-width="100%"></div>
                         </div>
@@ -279,12 +274,12 @@
                     
                     <div class="language-card fade-in-up">
                         <div class="language-flag">🇬🇧</div>
-                        <h3>Anglais</h3>
-                        <div class="language-level">Courant (C1)</div>
+                        <h3 data-i18n="skills.english">Anglais</h3>
+                        <div class="language-level" data-i18n="skills.fluentC1">Courant (C1)</div>
                         <div class="language-bar">
                             <div class="language-progress" data-width="85%"></div>
                         </div>
-                        <p class="language-description">
+                        <p class="language-description" data-i18n="skills.englishDesc">
                             Capacité à travailler en environnement international, 
                             rédaction technique et communication professionnelle.
                         </p>
@@ -297,44 +292,44 @@
         <section class="soft-skills section">
             <div class="container">
                 <div class="section-title fade-in-up">
-                    <h2>Compétences transversales</h2>
+                    <h2 data-i18n="skills.softTitle">Compétences transversales</h2>
                 </div>
                 
                 <div class="soft-skills-grid">
                     <div class="soft-skill-item fade-in-up">
                         <div class="soft-skill-icon">🎯</div>
-                        <h3>Résolution de problèmes</h3>
-                        <p>Approche analytique et méthodique pour identifier et résoudre les défis techniques</p>
+                        <h3 data-i18n="skills.problemSolving">Résolution de problèmes</h3>
+                        <p data-i18n="skills.problemSolvingDesc">Approche analytique et méthodique pour identifier et résoudre les défis techniques</p>
                     </div>
                     
                     <div class="soft-skill-item fade-in-up">
                         <div class="soft-skill-icon">🤝</div>
-                        <h3>Travail en équipe</h3>
-                        <p>Collaboration efficace et communication claire avec les équipes multidisciplinaires</p>
+                        <h3 data-i18n="skills.teamwork">Travail en équipe</h3>
+                        <p data-i18n="skills.teamworkDesc">Collaboration efficace et communication claire avec les équipes multidisciplinaires</p>
                     </div>
                     
                     <div class="soft-skill-item fade-in-up">
                         <div class="soft-skill-icon">⏰</div>
-                        <h3>Gestion du temps</h3>
-                        <p>Organisation rigoureuse et respect des délais dans un environnement agile</p>
+                        <h3 data-i18n="skills.timeManagement">Gestion du temps</h3>
+                        <p data-i18n="skills.timeManagementDesc">Organisation rigoureuse et respect des délais dans un environnement agile</p>
                     </div>
                     
                     <div class="soft-skill-item fade-in-up">
                         <div class="soft-skill-icon">🚀</div>
-                        <h3>Adaptabilité</h3>
-                        <p>Capacité à s'adapter rapidement aux nouvelles technologies et méthodologies</p>
+                        <h3 data-i18n="skills.adaptability">Adaptabilité</h3>
+                        <p data-i18n="skills.adaptabilityDesc">Capacité à s'adapter rapidement aux nouvelles technologies et méthodologies</p>
                     </div>
                     
                     <div class="soft-skill-item fade-in-up">
                         <div class="soft-skill-icon">💡</div>
-                        <h3>Créativité</h3>
-                        <p>Innovation dans les solutions techniques et approche créative des projets</p>
+                        <h3 data-i18n="skills.creativity">Créativité</h3>
+                        <p data-i18n="skills.creativityDesc">Innovation dans les solutions techniques et approche créative des projets</p>
                     </div>
                     
                     <div class="soft-skill-item fade-in-up">
                         <div class="soft-skill-icon">📚</div>
-                        <h3>Apprentissage continu</h3>
-                        <p>Veille technologique constante et formation aux dernières tendances du web</p>
+                        <h3 data-i18n="skills.continuousLearning">Apprentissage continu</h3>
+                        <p data-i18n="skills.continuousLearningDesc">Veille technologique constante et formation aux dernières tendances du web</p>
                     </div>
                 </div>
             </div>
@@ -344,11 +339,11 @@
         <section class="cta-section">
             <div class="container">
                 <div class="cta-content fade-in-up">
-                    <h2>Prêt à mettre ces compétences au service de votre projet ?</h2>
-                    <p>Discutons de la façon dont mon expertise peut propulser votre vision vers le succès.</p>
+                    <h2 data-i18n="skills.skillsCtaTitle">Prêt à mettre ces compétences au service de votre projet ?</h2>
+                    <p data-i18n="skills.skillsCtaText">Discutons de la façon dont mon expertise peut propulser votre vision vers le succès.</p>
                     <div class="cta-buttons">
-                        <a href="projets.html" class="btn btn-primary">Voir mes réalisations</a>
-                        <a href="contact.html" class="btn btn-outline">Démarrer un projet</a>
+                        <a href="projets.html" class="btn btn-primary" data-i18n="skills.seeWork">Voir mes réalisations</a>
+                        <a href="contact.html" class="btn btn-outline" data-i18n="common.startProject">Démarrer un projet</a>
                     </div>
                 </div>
             </div>
@@ -361,26 +356,26 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><a href="index.html">Rémi Sarro</a></h3>
-                    <p>Chef de projet & Développeur web</p>
-                    <p>Transformant les idées en solutions web innovantes</p>
+                    <p data-i18n="home.footerRole">Chef de projet & Développeur web</p>
+                    <p data-i18n="home.footerMission">Transformant les idées en solutions web innovantes</p>
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Navigation</h3>
+                    <h3 data-i18n="footer.navigation">Navigation</h3>
                     <div class="footer-nav-columns">
                         <div class="footer-nav-col">
-                            <a href="apropos.html">À propos</a>
-                            <a href="competences.html">Compétences</a>
+                            <a href="apropos.html" data-i18n="nav.about">À propos</a>
+                            <a href="competences.html" data-i18n="nav.skills">Compétences</a>
                         </div>
                         <div class="footer-nav-col">
-                            <a href="projets.html">Projets</a>
-                            <a href="contact.html">Contact</a>
+                            <a href="projets.html" data-i18n="nav.projects">Projets</a>
+                            <a href="contact.html" data-i18n="nav.contact">Contact</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Contact</h3>
+                    <h3 data-i18n="footer.contact">Contact</h3>
                     <a href="mailto:remi.sarro@gmail.com">remi.sarro@gmail.com</a><br>
                     <a href="tel:+33685139774">+33 6 85 13 97 74</a>
                     <div class="social-links">
@@ -395,7 +390,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Rémi Sarro. Tous droits réservés.</p>
+                <p>&copy; 2024 Rémi Sarro. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
             </div>
         </div>
     </footer>

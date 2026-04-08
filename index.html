@@ -19,12 +19,29 @@
             </a>
             
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="nav-link active">Accueil</a></li>
-                <li><a href="apropos.html" class="nav-link">À propos</a></li>
-                <li><a href="competences.html" class="nav-link">Compétences</a></li>
-                <li><a href="projets.html" class="nav-link">Projets</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="index.html" class="nav-link active" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="apropos.html" class="nav-link" data-i18n="nav.about">À propos</a></li>
+                <li><a href="competences.html" class="nav-link" data-i18n="nav.skills">Compétences</a></li>
+                <li><a href="projets.html" class="nav-link" data-i18n="nav.projects">Projets</a></li>
+                <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
             </ul>
+
+            <div class="lang-switcher" id="lang-switcher">
+                <button class="lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="lang-code">FR</span>
+                    <span class="lang-chevron" aria-hidden="true">▾</span>
+                </button>
+                <div class="lang-menu" role="listbox" aria-label="Choisir la langue">
+                    <button class="lang-option" type="button" role="option" data-lang="fr" aria-selected="true">
+                        <span class="lang-flag" aria-hidden="true">🇫🇷</span>
+                        <span>Français</span>
+                    </button>
+                    <button class="lang-option" type="button" role="option" data-lang="en" aria-selected="false">
+                        <span class="lang-flag" aria-hidden="true">🇬🇧</span>
+                        <span>English</span>
+                    </button>
+                </div>
+            </div>
             
             <div class="nav-toggle" id="nav-toggle">
                 <span></span>
@@ -42,13 +59,13 @@
                 <div class="hero-content">
                     <div class="hero-text fade-in-left">
                         <h1 class="hero-title">Sarro Rémi</h1>
-                        <h2 class="hero-subtitle">Consultant IT</h2>
-                        <p class="hero-description">
+                        <h2 class="hero-subtitle" data-i18n="home.subtitle">Développeur Full Stack / Chef de projets</h2>
+                        <p class="hero-description" data-i18n="home.heroDescription">
                             À la manière d'un astronaute, je transforme vos idées en fusées prêtes à explorer l'univers du web.
                         </p>
                         <div class="hero-buttons">
-                            <a href="projets.html" class="btn btn-primary">Voir mes projets</a>
-                            <a href="cv/Rémi Sarro_CV_IT.pdf" class="btn btn-outline" download>Télécharger CV</a>
+                            <a href="projets.html" class="btn btn-primary" data-i18n="common.seeProjects">Voir mes projets</a>
+                            <a href="cv/Rémi Sarro_CV_IT.pdf" class="btn btn-outline" download data-i18n="common.downloadCv">Télécharger CV</a>
                         </div>
                     </div>
                     <div class="hero-image fade-in-right">
@@ -70,32 +87,32 @@
         <section class="quick-about section">
             <div class="container">
                 <div class="section-title fade-in-up">
-                    <h2>Qui suis-je ?</h2>
+                    <h2 data-i18n="home.whoAmI">Qui suis-je ?</h2>
                 </div>
                 <div class="quick-about-content">
                     <div class="quick-about-text fade-in-left">
-                        <p>
+                        <p data-i18n="home.quickAboutP1">
                             Ingénieur de formation avec une passion pour le développement web et l'assurance qualité. 
                             Je combine expertise technique et créativité pour créer des solutions web innovantes et robustes.
                         </p>
-                        <p>
+                        <p data-i18n="home.quickAboutP2">
                             Spécialisé dans la gestion de projets etles technologies modernes du web, je m'assure que chaque projet respecte 
                             les plus hauts standards de qualité et d'expérience utilisateur.
                         </p>
-                        <a href="apropos.html" class="btn btn-outline">En savoir plus</a>
+                        <a href="apropos.html" class="btn btn-outline" data-i18n="common.learnMore">En savoir plus</a>
                     </div>
                     <div class="quick-about-stats fade-in-right">
                         <div class="stat-item">
-                            <div class="stat-number">3+</div>
-                            <div class="stat-label">Années d'expérience</div>
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label" data-i18n="home.experienceYears">Années d'expérience</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">5+</div>
-                            <div class="stat-label">Projets réalisés</div>
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label" data-i18n="home.projectsCompleted">Projets réalisés</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">100%</div>
-                            <div class="stat-label">Satisfaction client</div>
+                            <div class="stat-label" data-i18n="home.satisfaction">Satisfaction client</div>
                         </div>
                     </div>
                 </div>
@@ -106,19 +123,19 @@
         <section class="featured-projects section">
             <div class="container">
                 <div class="section-title fade-in-up">
-                    <h2>Projets vedette</h2>
+                    <h2 data-i18n="home.featuredProjects">Projets vedette</h2>
                 </div>
                 <div class="projects-grid">
                     <div class="project-card fade-in-up">
                         <div class="project-image">
                             <img src="portfolio/spaceman.png" alt="Projet Spaceman">
                             <div class="project-overlay">
-                                <button class="btn btn-primary" onclick="openModal('spaceman')">Voir le projet</button>
+                                <button class="btn btn-primary" onclick="openModal('spaceman')" data-i18n="common.viewProject">Voir le projet</button>
                             </div>
                         </div>
                         <div class="project-info">
                             <h3>Spaceman</h3>
-                            <p>Application web moderne avec interface utilisateur intuitive</p>
+                            <p data-i18n="home.spacemanDesc">Application web moderne avec interface utilisateur intuitive</p>
                             <div class="project-tech">
                                 <span class="tech-tag">Animations</span>
                                 <span class="tech-tag">Responsive Design</span>
@@ -130,12 +147,12 @@
                         <div class="project-image">
                             <img src="portfolio/conciergerie.png" alt="Projet Conciergerie">
                             <div class="project-overlay">
-                                <button class="btn btn-primary" onclick="openModal('conciergerie')">Voir le projet</button>
+                                <button class="btn btn-primary" onclick="openModal('conciergerie')" data-i18n="common.viewProject">Voir le projet</button>
                             </div>
                         </div>
                         <div class="project-info">
                             <h3>Conciergerie</h3>
-                            <p>Plateforme de services avec système de gestion avancé</p>
+                            <p data-i18n="home.conciergerieDesc">Plateforme de services avec système de gestion avancé</p>
                             <div class="project-tech">
                                 <span class="tech-tag">Interactifs design</span>
                                 <span class="tech-tag">Hebergement</span>
@@ -147,12 +164,12 @@
                         <div class="project-image">
                             <img src="portfolio/brebis.png" alt="Projet Brebis Brigasque">
                             <div class="project-overlay">
-                                <button class="btn btn-primary" onclick="openModal('brebis')">Voir le projet</button>
+                                <button class="btn btn-primary" onclick="openModal('brebis')" data-i18n="common.viewProject">Voir le projet</button>
                             </div>
                         </div>
                         <div class="project-info">
                             <h3>Brebis Brigasque</h3>
-                            <p>Site web pour la promotion du patrimoine local et des traditions</p>
+                            <p data-i18n="home.brebisDesc">Site web pour la promotion du patrimoine local et des traditions</p>
                             <div class="project-tech">
                                 <span class="tech-tag">Data base</span>
                                 <span class="tech-tag">PHP</span>
@@ -162,7 +179,7 @@
                     </div>
                 </div>
                 <div class="projects-cta fade-in-up">
-                    <a href="projets.html" class="btn btn-primary">Voir tous les projets</a>
+                    <a href="projets.html" class="btn btn-primary" data-i18n="common.seeAllProjects">Voir tous les projets</a>
                 </div>
             </div>
         </section>
@@ -171,9 +188,9 @@
         <section class="cta-section">
             <div class="container">
                 <div class="cta-content fade-in-up">
-                    <h2>Prêt à décoller ensemble ?</h2>
-                    <p>Transformons vos idées en réalité digitale. Contactez-moi pour discuter de votre projet.</p>
-                    <a href="contact.html" class="btn btn-primary">Démarrer un projet</a>
+                    <h2 data-i18n="home.readyToLaunch">Prêt à décoller ensemble ?</h2>
+                    <p data-i18n="home.ctaText">Transformons vos idées en réalité digitale. Contactez-moi pour discuter de votre projet.</p>
+                    <a href="contact.html" class="btn btn-primary" data-i18n="common.startProject">Démarrer un projet</a>
                 </div>
             </div>
         </section>
@@ -185,26 +202,26 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><a href="index.html">Rémi Sarro</a></h3>
-                    <p>Chef de projet & Développeur web</p>
-                    <p>Transformant les idées en solutions web innovantes</p>
+                    <p data-i18n="home.footerRole">Chef de projet & Développeur web</p>
+                    <p data-i18n="home.footerMission">Transformant les idées en solutions web innovantes</p>
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Navigation</h3>
+                    <h3 data-i18n="footer.navigation">Navigation</h3>
                     <div class="footer-nav-columns">
                         <div class="footer-nav-col">
-                            <a href="apropos.html">À propos</a>
-                            <a href="competences.html">Compétences</a>
+                            <a href="apropos.html" data-i18n="nav.about">À propos</a>
+                            <a href="competences.html" data-i18n="nav.skills">Compétences</a>
                         </div>
                         <div class="footer-nav-col">
-                            <a href="projets.html">Projets</a>
-                            <a href="contact.html">Contact</a>
+                            <a href="projets.html" data-i18n="nav.projects">Projets</a>
+                            <a href="contact.html" data-i18n="nav.contact">Contact</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Contact</h3>
+                    <h3 data-i18n="footer.contact">Contact</h3>
                     <a href="mailto:remi.sarro@gmail.com">remi.sarro@gmail.com</a><br>
                     <a href="tel:+33685139774">+33 6 85 13 97 74</a>
                     <div class="social-links">
@@ -219,7 +236,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Rémi Sarro. Tous droits réservés.</p>
+                <p>&copy; 2024 Rémi Sarro. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
             </div>
         </div>
     </footer>
@@ -245,7 +262,7 @@
             <!-- Content section -->
             <div class="popup-body">
                 <div class="popup-main-content">
-                    <h3>À propos du projet</h3>
+                    <h3 data-i18n="common.aboutProject">À propos du projet</h3>
                     <p class="popup-description">
                         Site web moderne pour une agence de marketing digital spécialisée dans l'exploration de nouveaux territoires commerciaux. 
                         Design épuré avec une identité visuelle forte inspirée de l'univers spatial.
@@ -254,7 +271,7 @@
                 
                 <div class="popup-sidebar">
                     <div class="popup-features">
-                        <h4>Fonctionnalités</h4>
+                        <h4 data-i18n="common.features">Fonctionnalités</h4>
                         <ul>
                             <li>Design responsive et moderne</li>
                             <li>Animations CSS fluides</li>
@@ -264,7 +281,7 @@
                         </ul>
                     </div>
                     <div class="popup-tech">
-                        <h4>Technologies</h4>
+                        <h4 data-i18n="common.technologies">Technologies</h4>
                         <div class="tech-tags">
                             <span class="tech-tag">HTML5</span>
                             <span class="tech-tag">CSS3</span>
@@ -298,7 +315,7 @@
             <!-- Content section -->
             <div class="popup-body">
                 <div class="popup-main-content">
-                    <h3>À propos du projet</h3>
+                    <h3 data-i18n="common.aboutProject">À propos du projet</h3>
                     <p class="popup-description">
                         Plateforme web élégante pour une conciergerie haut de gamme offrant des services personnalisés. 
                         Interface sophistiquée reflétant le standing et la qualité des services proposés.
@@ -310,7 +327,7 @@
                 
                 <div class="popup-sidebar">
                     <div class="popup-features">
-                        <h4>Fonctionnalités</h4>
+                        <h4 data-i18n="common.features">Fonctionnalités</h4>
                         <ul>
                             <li>Interface premium et raffinée</li>
                             <li>Système de réservation en ligne</li>
@@ -320,7 +337,7 @@
                         </ul>
                     </div>
                     <div class="popup-tech">
-                        <h4>Technologies</h4>
+                        <h4 data-i18n="common.technologies">Technologies</h4>
                         <div class="tech-tags">
                             <span class="tech-tag">HTML5</span>
                             <span class="tech-tag">CSS3</span>
@@ -353,7 +370,7 @@
             <!-- Content section -->
             <div class="popup-body">
                 <div class="popup-main-content">
-                    <h3>À propos du projet</h3>
+                    <h3 data-i18n="common.aboutProject">À propos du projet</h3>
                     <p class="popup-description">
                         Site web authentique dédié à la valorisation de la race ovine Brigasque et de ses produits artisanaux. 
                         Design chaleureux mettant en valeur le patrimoine agricole et les traditions locales.
@@ -365,7 +382,7 @@
                 
                 <div class="popup-sidebar">
                     <div class="popup-features">
-                        <h4>Fonctionnalités</h4>
+                        <h4 data-i18n="common.features">Fonctionnalités</h4>
                         <ul>
                             <li>Galerie photo interactive</li>
                             <li>Boutique en ligne intégrée</li>
@@ -375,7 +392,7 @@
                         </ul>
                     </div>
                     <div class="popup-tech">
-                        <h4>Technologies</h4>
+                        <h4 data-i18n="common.technologies">Technologies</h4>
                         <div class="tech-tags">
                             <span class="tech-tag">HTML5</span>
                             <span class="tech-tag">CSS3</span>

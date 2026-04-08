@@ -14,6 +14,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all components
     initNavigation();
+    initLanguageSwitcher();
     initScrollAnimations();
     initContactForm();
     initSkillsAnimations();
@@ -22,6 +23,325 @@ document.addEventListener('DOMContentLoaded', function() {
     initTypingAnimation();
     initParallaxEffects();
 });
+
+// --- i18n (FR default + EN dictionary) ---
+const I18N_EN = {
+    // Navigation
+    'nav.home': 'Home',
+    'nav.about': 'About',
+    'nav.skills': 'Skills',
+    'nav.projects': 'Projects',
+    'nav.contact': 'Contact',
+
+    // Common
+    'common.viewProject': 'View project',
+    'common.learnMore': 'Learn more',
+    'common.seeProjects': 'See my projects',
+    'common.downloadCv': 'Download CV',
+    'common.startProject': 'Start a project',
+    'common.seeAllProjects': 'See all projects',
+    'common.contactMe': 'Contact me',
+    'common.sendMessage': 'Send a message',
+    'common.startNow': 'Get started',
+    'common.aboutProject': 'About the project',
+    'common.features': 'Features',
+    'common.technologies': 'Technologies',
+
+    // Footer
+    'footer.navigation': 'Navigation',
+    'footer.contact': 'Contact',
+    'footer.rights': 'All rights reserved.',
+
+    // Index (Home)
+    'home.subtitle': 'Full-Stack Developer / Project Manager',
+    'home.heroDescription': "Like an astronaut, I turn your ideas into rockets ready to explore the universe of the web.",
+    'home.whoAmI': 'Who am I?',
+    'home.quickAboutP1': 'Engineer by training with a passion for web development and quality assurance. I combine technical expertise and creativity to build innovative, robust web solutions.',
+    'home.quickAboutP2': 'Specialized in project management and modern web technologies, I ensure every project meets the highest standards of quality and user experience.',
+    'home.experienceYears': "Years of experience",
+    'home.projectsCompleted': 'Projects delivered',
+    'home.satisfaction': 'Client satisfaction',
+    'home.featuredProjects': 'Featured projects',
+    'home.spacemanDesc': 'Modern web application with an intuitive user interface',
+    'home.conciergerieDesc': 'Service platform with an advanced management system',
+    'home.brebisDesc': 'Website promoting local heritage and traditions',
+    'home.readyToLaunch': 'Ready to launch together?',
+    'home.ctaText': "Let’s turn your ideas into digital reality. Contact me to discuss your project.",
+
+    // Home footer intro
+    'home.footerRole': 'Project manager & Web developer',
+    'home.footerMission': 'Turning ideas into innovative web solutions',
+
+    // About page
+    'about.title': 'About me',
+    'about.subtitle': 'Discover my background and my passion for web development',
+    'about.storyTitle': 'My story',
+    'about.timelineTitle': 'My journey',
+    'about.valuesTitle': 'My values',
+    'about.beyondCodeTitle': 'Beyond code',
+    'about.ctaTitle': 'Ready for the adventure?',
+    'about.ctaText': 'Let’s discover together how to turn your ideas into digital reality.',
+    'about.bioP1': 'With an engineering background and experience in a demanding industrial environment, I developed a growing passion for web development and software quality—approaching every project with the rigor of a project manager and the curiosity of an astronaut.',
+    'about.bioP2': 'My experience in technical project management gave me a global, structured vision and a strong ability to collaborate with multidisciplinary design teams. This transition to web development now lets me bridge industrial constraints, user needs and effective technical solutions.',
+    'about.bioP3': 'By specializing in modern web technologies, I leverage my industrial foundation and organizational skills to design reliable, consistent, user‑experience‑oriented interfaces. Each project is a new transformation stage where coordination, anticipation and innovation are essential to reach the goal.',
+    'about.bioP4': 'My quality- and QA-driven approach follows the industry’s high standards: performance, reliability and security are at the heart of every build. Whether it’s an industrial product or a web application, the expectation is the same: deliver impeccable work.',
+    'about.highlightInnovationTitle': 'Innovation',
+    'about.highlightInnovationText': 'Always looking for the latest technologies to propel your projects',
+    'about.highlightPrecisionTitle': 'Precision',
+    'about.highlightPrecisionText': 'A meticulous approach inherited from my engineering training',
+    'about.highlightExcellenceTitle': 'Excellence',
+    'about.highlightExcellenceText': 'Total commitment to quality and client satisfaction',
+    'about.tl1Title': 'Freelance Web Developer',
+    'about.tl1Text': 'Launch of my web development activity, with a focus on building showcase websites and modern web applications.',
+    'about.tl2Title': 'Project Manager — Safran Aerosystems',
+    'about.tl2Text': 'Equipment definition updates for international clients and internal PLM data processing tools.',
+    'about.tl3Text': 'Project manager for bumper development (Porsche / Land Rover). Built strong project expertise and led design teams.',
+    'about.tl4Title': 'Web Development Training',
+    'about.tl4Text': 'Deep dive into modern web technologies: HTML5, CSS3, JavaScript, Python and related frameworks.',
+    'about.tl5Title': 'Engineering Degree',
+    'about.tl5Text': 'Graduated as an engineer—solid foundations for my methodical approach to development.',
+    'about.tl6Title': 'First steps into code',
+    'about.tl6Text': 'Discovered programming and immediately fell in love with web development. The space adventure begins!',
+    'about.value1Title': 'Attention to detail',
+    'about.value1Text': 'Every pixel matters; every line of code counts. Perfection lives in the details.',
+    'about.value2Title': 'Collaboration',
+    'about.value2Text': 'The best projects are born from collaboration. I listen, I understand, I propose.',
+    'about.value3Title': 'Continuous learning',
+    'about.value3Text': 'The web evolves constantly. I keep learning to stay at the cutting edge.',
+    'about.value4Title': 'Performance',
+    'about.value4Text': 'A fast website is a website that converts. Optimization is always a priority.',
+    'about.personalP1': 'When I’m not deep in code, you’ll probably find me looking up at the starry sky or pushing my limits on a sports field. One invites me to dream bigger; the other to challenge myself every day.',
+    'about.personalP2': 'Passionate about astronomy and sports, I see each web project as a careful exploration—a trajectory to define and a precise landing. Sports teach me rigor, endurance and a taste for challenge, qualities I bring into my work.',
+    'about.personalP3': 'This passion for exploration and discovery fuels my creativity and inspires each of my professional projects.',
+
+    // Skills page
+    'skills.title': 'My skills',
+    'skills.subtitle': 'A complete tech stack to propel your projects to the stars',
+    'skills.technicalTitle': 'Technical skills',
+    'skills.showcaseTitle': 'Showcase website',
+    'skills.showcaseDesc': 'Build modern showcase sites to present an activity, inspire trust and convert with clear navigation.',
+    'skills.ecommerceTitle': 'E-commerce website',
+    'skills.ecommerceDesc': 'Set up conversion-oriented online stores: catalog, product pages, smooth checkout and a polished mobile experience.',
+    'skills.webappTitle': 'Web application',
+    'skills.webappDesc': 'Develop interactive web apps: dynamic interfaces, API integration and business logic for useful daily tools.',
+    'skills.designTitle': 'Graphic design',
+    'skills.designDesc': 'Create visual assets to strengthen identity: mockups, banners, web visuals and overall graphic consistency.',
+    'skills.pmTitle': 'Project Manager / Product Owner',
+    'skills.pmExpTitle': 'Project experience (automotive & aerospace)',
+    'skills.pmExpText': 'I have 3 years of project management experience in the automotive and aerospace industries—two environments with very different ways of working. I quickly adapted to constraints, processes and rhythms specific to each sector, while staying focused on objectives, quality and deadlines.',
+    'skills.pmBullet1': 'Project leadership and cross-functional coordination',
+    'skills.pmBullet2': 'Requirements gathering, prioritization and action tracking',
+    'skills.pmBullet3': 'Facilitation of rituals (follow-ups, progress meetings)',
+    'skills.pmBullet4': 'Risk management, trade-offs and reporting',
+    'skills.pmBullet5': 'Results-driven mindset: quality, cost, delivery',
+    'skills.pmBullet6': 'Adaptation to each organization’s methods and tools',
+    'skills.toolsPractices': 'Tools & practices',
+    'skills.toolsTech': 'Tools & Technologies',
+    'skills.webDev': 'Web development',
+    'skills.pm': 'Project management',
+    'skills.other': 'Other',
+    'skills.languagesTitle': 'Language skills',
+    'skills.french': 'French',
+    'skills.native': 'Native language',
+    'skills.english': 'English',
+    'skills.fluentC1': 'Fluent (C1)',
+    'skills.englishDesc': 'Able to work in international environments, technical writing and professional communication.',
+    'skills.softTitle': 'Transferable skills',
+    'skills.problemSolving': 'Problem solving',
+    'skills.problemSolvingDesc': 'Analytical and methodical approach to identify and solve technical challenges',
+    'skills.teamwork': 'Teamwork',
+    'skills.teamworkDesc': 'Effective collaboration and clear communication with multidisciplinary teams',
+    'skills.timeManagement': 'Time management',
+    'skills.timeManagementDesc': 'Strong organization and respect for deadlines in an agile environment',
+    'skills.adaptability': 'Adaptability',
+    'skills.adaptabilityDesc': 'Ability to quickly adapt to new technologies and methodologies',
+    'skills.creativity': 'Creativity',
+    'skills.creativityDesc': 'Innovation in technical solutions and a creative approach to projects',
+    'skills.continuousLearning': 'Continuous learning',
+    'skills.continuousLearningDesc': 'Ongoing tech watch and training on the latest web trends',
+    'skills.skillsCtaTitle': 'Ready to put these skills to work for your project?',
+    'skills.skillsCtaText': 'Let’s discuss how my expertise can help propel your vision to success.',
+    'skills.seeWork': 'See my work',
+
+    // Projects page
+    'projects.title': 'My web projects',
+    'projects.subtitle': 'Explore my creative universe: from websites to apps, each project is a new space adventure',
+    'projects.category.webapp': 'Web application',
+    'projects.category.website': 'Website',
+    'projects.category.portfolio': 'Portfolio',
+    'projects.category.app': 'Application',
+    'projects.category.ecommerce': 'E-commerce',
+    'projects.spacemanText': 'Modern web application with an intuitive user interface and immersive space animations.',
+    'projects.conciergerieText': 'Concierge service platform with an advanced management system and an admin interface.',
+    'projects.robbieText': 'Photographer portfolio site with an interactive gallery and advanced filters.',
+    'projects.brebisText': 'Creative website with a modern design and an optimized user experience to drive engagement.',
+    'projects.transitioText': 'Transition app with smooth animations and a responsive multi-platform interface.',
+    'projects.auvalText': 'E-commerce site for a florist: product catalog, highlighted creations and an optimized checkout flow.',
+    'projects.ctaTitle': 'Ready to create something extraordinary?',
+    'projects.ctaText': 'Each project is a new mission. Let’s embark together on your next digital adventure.',
+    'projects.ctaSkills': 'See my skills',
+
+    // Contact page
+    'contact.title': 'Get in touch',
+    'contact.subtitle': 'Ready to launch together? Let’s talk about your project and turn your ideas into digital reality',
+    'contact.formTitle': 'Send me a message',
+    'contact.formIntro': "Describe your project and I’ll get back to you as soon as possible.",
+    'contact.fullName': 'Full name *',
+    'contact.email': 'Email address *',
+    'contact.subject': 'Subject *',
+    'contact.message': 'Message *',
+    'contact.send': 'Send',
+    'contact.subjectPlaceholder': 'Select a topic',
+    'contact.subject.showcase': 'Showcase website',
+    'contact.subject.webapp': 'Web application',
+    'contact.subject.ecommerce': 'E-commerce',
+    'contact.subject.qa': 'QA & Testing',
+    'contact.subject.maintenance': 'Maintenance',
+    'contact.subject.other': 'Other',
+    'contact.messagePlaceholder': 'Describe your project, your needs, your approximate budget...',
+    'contact.privacy': 'I agree that my data will be used to contact me regarding my request *',
+    'contact.sending': 'Sending...',
+    'contact.successTitle': 'Message sent successfully!',
+    'contact.successText': 'Thank you for your message. I will get back to you as soon as possible.',
+    'contact.contactInfo': 'Contact information',
+    'contact.phone': 'Phone',
+    'contact.location': 'Location',
+    'contact.locationText': 'France, available remotely',
+    'contact.availability': 'Availability',
+    'contact.availabilityText': 'Mon–Fri: 9am–6pm\nReply within 24h',
+    'contact.socialTitle': 'Social networks',
+    'contact.socialLinkedin': 'Professional profile',
+    'contact.socialGithub': 'My code projects',
+    'contact.socialCv': 'Download my resume',
+    'contact.faqTitle': 'Frequently asked questions',
+    'contact.faq1Q': 'What types of projects do you build?',
+    'contact.faq1A': 'I build showcase websites, web applications, e-commerce platforms, and I also provide QA testing services. Every project is tailored to the client’s needs.',
+    'contact.faq2Q': 'What is your working process?',
+    'contact.faq2A': 'I start by analyzing your needs, then I propose the right technical solution. Development is iterative, with regular check-ins to validate progress.',
+    'contact.faq3Q': 'How long does a project take?',
+    'contact.faq3A': 'It depends on complexity: 2–4 weeks for a showcase website, 1–3 months for a complete web application. I always provide a detailed timeline upfront.',
+    'contact.faq4Q': 'Do you offer maintenance?',
+    'contact.faq4A': 'Yes. I offer maintenance contracts to ensure security, updates, and long-term reliability of your website.',
+    'contact.faq5Q': 'Do you work remotely?',
+    'contact.faq5A': 'Absolutely. I mostly work remotely, which allows me to support clients across France and internationally.',
+    'contact.faq6Q': 'Could I build my website myself with Wix?',
+    'contact.faq6A': 'You could, but Wix sites are often limited in customization, performance, and SEO. A developer ensures a unique, optimized and scalable site tailored to your exact needs.',
+    'contact.ctaTitle': 'Ready to launch?',
+    'contact.ctaText': 'Your project deserves special attention. Let’s discuss it together!',
+    'contact.ctaEmail': 'Send an email',
+    'contact.ctaCall': 'Call now',
+};
+
+function getCurrentLang() {
+    const stored = localStorage.getItem('site_lang');
+    return stored === 'en' ? 'en' : 'fr';
+}
+
+function applyI18n(lang) {
+    // Set document lang attribute
+    document.documentElement.setAttribute('lang', lang);
+
+    const nodes = document.querySelectorAll('[data-i18n], [data-i18n-attr]');
+    nodes.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const attr = el.getAttribute('data-i18n-attr'); // e.g. "content", "placeholder"
+
+        // Store FR original once
+        if (attr) {
+            const current = el.getAttribute(attr) ?? '';
+            if (!el.dataset.i18nFr) el.dataset.i18nFr = current;
+        } else {
+            const current = el.textContent ?? '';
+            if (!el.dataset.i18nFr) el.dataset.i18nFr = current.trimEnd();
+        }
+
+        if (lang === 'fr') {
+            if (attr) el.setAttribute(attr, el.dataset.i18nFr);
+            else el.textContent = el.dataset.i18nFr;
+            return;
+        }
+
+        if (!key) return;
+        const enValue = I18N_EN[key];
+        if (!enValue) return; // if missing, keep current
+
+        if (attr) el.setAttribute(attr, enValue);
+        else el.textContent = enValue;
+    });
+}
+
+// Language Switcher (UI + persistence only; translations come later)
+function initLanguageSwitcher() {
+    const switcher = document.getElementById('lang-switcher');
+    if (!switcher) return;
+
+    const toggle = switcher.querySelector('.lang-toggle');
+    const menu = switcher.querySelector('.lang-menu');
+    const options = Array.from(switcher.querySelectorAll('.lang-option'));
+    const codeEl = switcher.querySelector('.lang-code');
+
+    if (!toggle || !menu || !codeEl || options.length === 0) return;
+
+    function setOpen(isOpen) {
+        switcher.classList.toggle('is-open', isOpen);
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+
+    function close() {
+        setOpen(false);
+    }
+
+    function open() {
+        setOpen(true);
+    }
+
+    function applySelectedUI(lang) {
+        // Update toggle label
+        codeEl.textContent = lang.toUpperCase();
+
+        // Update selected state in menu
+        options.forEach(btn => {
+            const isSelected = btn.getAttribute('data-lang') === lang;
+            btn.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+        });
+    }
+
+    // Initialize from storage
+    const initialLang = getCurrentLang();
+    applySelectedUI(initialLang);
+    applyI18n(initialLang);
+
+    // Toggle open/close
+    toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        const isOpen = switcher.classList.contains('is-open');
+        setOpen(!isOpen);
+    });
+
+    // Handle option click
+    options.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const lang = btn.getAttribute('data-lang') === 'en' ? 'en' : 'fr';
+            localStorage.setItem('site_lang', lang);
+            applySelectedUI(lang);
+            applyI18n(lang);
+            close();
+        });
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!switcher.classList.contains('is-open')) return;
+        if (!switcher.contains(e.target)) close();
+    });
+
+    // Close on escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key !== 'Escape') return;
+        if (switcher.classList.contains('is-open')) close();
+    });
+}
 
 // Navigation Functions
 function initNavigation() {

@@ -19,12 +19,29 @@
             </a>
             
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="nav-link">Accueil</a></li>
-                <li><a href="apropos.html" class="nav-link">À propos</a></li>
-                <li><a href="competences.html" class="nav-link">Compétences</a></li>
-                <li><a href="projets.html" class="nav-link active">Projets</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="apropos.html" class="nav-link" data-i18n="nav.about">À propos</a></li>
+                <li><a href="competences.html" class="nav-link" data-i18n="nav.skills">Compétences</a></li>
+                <li><a href="projets.html" class="nav-link active" data-i18n="nav.projects">Projets</a></li>
+                <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
             </ul>
+
+            <div class="lang-switcher" id="lang-switcher">
+                <button class="lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="lang-code">FR</span>
+                    <span class="lang-chevron" aria-hidden="true">▾</span>
+                </button>
+                <div class="lang-menu" role="listbox" aria-label="Choisir la langue">
+                    <button class="lang-option" type="button" role="option" data-lang="fr" aria-selected="true">
+                        <span class="lang-flag" aria-hidden="true">🇫🇷</span>
+                        <span>Français</span>
+                    </button>
+                    <button class="lang-option" type="button" role="option" data-lang="en" aria-selected="false">
+                        <span class="lang-flag" aria-hidden="true">🇬🇧</span>
+                        <span>English</span>
+                    </button>
+                </div>
+            </div>
             
             <div class="nav-toggle" id="nav-toggle">
                 <span></span>
@@ -40,8 +57,8 @@
         <section class="projects-hero section">
             <div class="container">
                 <div class="projects-hero-content fade-in-up">
-                    <h1>Mes projets web</h1>
-                    <p class="hero-subtitle">
+                    <h1 data-i18n="projects.title">Mes projets web</h1>
+                    <p class="hero-subtitle" data-i18n="projects.subtitle">
                         Explorez mon univers créatif : des sites web aux applications, 
                         chaque projet est une nouvelle aventure spatiale
                     </p>
@@ -60,20 +77,46 @@
                                 <img src="portfolio/spaceman.png" alt="Projet Spaceman">
                                 <div class="project-overlay">
                                     <div class="project-actions">
-                                        <button class="btn btn-primary" onclick="openModal('spaceman')">Voir le projet</button>
+                                        <button class="btn btn-primary" onclick="openModal('spaceman')" data-i18n="common.viewProject">Voir le projet</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="project-info">
-                                <div class="project-category">Application Web</div>
+                                <div class="project-category" data-i18n="projects.category.webapp">Application Web</div>
                                 <h3>Spaceman</h3>
-                                <p>Application web moderne avec interface utilisateur intuitive et animations spatiales immersives.</p>
+                                <p data-i18n="projects.spacemanText">Application web moderne avec interface utilisateur intuitive et animations spatiales immersives.</p>
                                 <div class="project-tech">
                                     <span class="tech-tag">HTML5</span>
                                     <span class="tech-tag">CSS3</span>
                                     <span class="tech-tag">JavaScript</span>
                                     <span class="tech-tag">Animations</span>
                                     <span class="tech-tag">Responsive Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Au val des roses Project -->
+                    <div class="project-item fade-in-up" data-category="web">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="portfolio/logo.png" alt="Projet Au val des roses">
+                                <div class="project-overlay">
+                                    <div class="project-actions">
+                                        <button class="btn btn-primary" onclick="openModal('au-val-des-roses')" data-i18n="common.viewProject">Voir le projet</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-category" data-i18n="projects.category.ecommerce">E-commerce</div>
+                                <h3>Au val des roses</h3>
+                                <p data-i18n="projects.auvalText">Site e-commerce pour fleuriste : catalogue produits, mise en avant des créations et parcours d’achat optimisé.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Responsive Design</span>
+                                    <span class="tech-tag">UX</span>
                                 </div>
                             </div>
                         </div>
@@ -86,14 +129,14 @@
                                 <img src="portfolio/conciergerie.png" alt="Projet Conciergerie">
                                 <div class="project-overlay">
                                     <div class="project-actions">
-                                        <button class="btn btn-primary" onclick="openModal('conciergerie')">Voir le projet</button>
+                                        <button class="btn btn-primary" onclick="openModal('conciergerie')" data-i18n="common.viewProject">Voir le projet</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="project-info">
-                                <div class="project-category">Site Web</div>
+                                <div class="project-category" data-i18n="projects.category.website">Site Web</div>
                                 <h3>Conciergerie</h3>
-                                <p>Plateforme de services de conciergerie avec système de gestion avancé et interface administrateur.</p>
+                                <p data-i18n="projects.conciergerieText">Plateforme de services de conciergerie avec système de gestion avancé et interface administrateur.</p>
                                 <div class="project-tech">
                                     <span class="tech-tag">Python</span>
                                     <span class="tech-tag">CSS3</span>
@@ -111,14 +154,14 @@
                                 <img src="portfolio/robbie-lens.png" alt="Projet Robbie Lens">
                                 <div class="project-overlay">
                                     <div class="project-actions">
-                                        <button class="btn btn-primary" onclick="openModal('robbie-lens')">Voir le projet</button>
+                                        <button class="btn btn-primary" onclick="openModal('robbie-lens')" data-i18n="common.viewProject">Voir le projet</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="project-info">
-                                <div class="project-category">Portfolio</div>
+                                <div class="project-category" data-i18n="projects.category.portfolio">Portfolio</div>
                                 <h3>Robbie Lens</h3>
-                                <p>Site portfolio pour photographe avec galerie interactive et système de filtres avancé.</p>
+                                <p data-i18n="projects.robbieText">Site portfolio pour photographe avec galerie interactive et système de filtres avancé.</p>
                                 <div class="project-tech">
                                     <span class="tech-tag">HTML5</span>
                                     <span class="tech-tag">CSS3</span>
@@ -137,14 +180,14 @@
                                 <img src="portfolio/brebis.png" alt="Projet Brebis">
                                 <div class="project-overlay">
                                     <div class="project-actions">
-                                        <button class="btn btn-primary" onclick="openModal('brebis')">Voir le projet</button>
+                                        <button class="btn btn-primary" onclick="openModal('brebis')" data-i18n="common.viewProject">Voir le projet</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="project-info">
-                                <div class="project-category">Site Web</div>
+                                <div class="project-category" data-i18n="projects.category.website">Site Web</div>
                                 <h3>Brebis</h3>
-                                <p>Site web créatif avec design moderne et expérience utilisateur optimisée pour l'engagement.</p>
+                                <p data-i18n="projects.brebisText">Site web créatif avec design moderne et expérience utilisateur optimisée pour l'engagement.</p>
                                 <div class="project-tech">
                                     <span class="tech-tag">HTML5</span>
                                     <span class="tech-tag">CSS3</span>
@@ -163,14 +206,14 @@
                                 <img src="portfolio/transitio.png" alt="Projet Transitio">
                                 <div class="project-overlay">
                                     <div class="project-actions">
-                                        <button class="btn btn-primary" onclick="openModal('transitio')">Voir le projet</button>
+                                        <button class="btn btn-primary" onclick="openModal('transitio')" data-i18n="common.viewProject">Voir le projet</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="project-info">
-                                <div class="project-category">Application</div>
+                                <div class="project-category" data-i18n="projects.category.app">Application</div>
                                 <h3>Transitio</h3>
-                                <p>Application de transition avec animations fluides et interface responsive multi-plateforme.</p>
+                                <p data-i18n="projects.transitioText">Application de transition avec animations fluides et interface responsive multi-plateforme.</p>
                                 <div class="project-tech">
                                     <span class="tech-tag">DIVI</span>
                                     <span class="tech-tag">WORDPRESS</span>
@@ -188,11 +231,11 @@
         <section class="cta-section">
             <div class="container">
                 <div class="cta-content fade-in-up">
-                    <h2>Prêt à créer quelque chose d'extraordinaire ?</h2>
-                    <p>Chaque projet est une nouvelle mission. Embarquons ensemble pour votre prochaine aventure digitale.</p>
+                    <h2 data-i18n="projects.ctaTitle">Prêt à créer quelque chose d'extraordinaire ?</h2>
+                    <p data-i18n="projects.ctaText">Chaque projet est une nouvelle mission. Embarquons ensemble pour votre prochaine aventure digitale.</p>
                     <div class="cta-buttons">
-                        <a href="contact.html" class="btn btn-primary">Démarrer un projet</a>
-                        <a href="competences.html" class="btn btn-outline">Voir mes compétences</a>
+                        <a href="contact.html" class="btn btn-primary" data-i18n="common.startProject">Démarrer un projet</a>
+                        <a href="competences.html" class="btn btn-outline" data-i18n="projects.ctaSkills">Voir mes compétences</a>
                     </div>
                 </div>
             </div>
@@ -220,7 +263,7 @@
             <!-- Content section -->
             <div class="popup-body">
                 <div class="popup-main-content">
-                    <h3>À propos du projet</h3>
+                    <h3 data-i18n="common.aboutProject">À propos du projet</h3>
                     <p class="popup-description">
                         Site web moderne pour une agence de marketing digital spécialisée dans l'exploration de nouveaux territoires commerciaux. 
                         Design épuré avec une identité visuelle forte inspirée de l'univers spatial.
@@ -229,7 +272,7 @@
                 
                 <div class="popup-sidebar">
                     <div class="popup-features">
-                        <h4>Fonctionnalités</h4>
+                        <h4 data-i18n="common.features">Fonctionnalités</h4>
                         <ul>
                             <li>Design responsive et moderne</li>
                             <li>Animations CSS fluides</li>
@@ -239,13 +282,66 @@
                         </ul>
                     </div>
                     <div class="popup-tech">
-                        <h4>Technologies</h4>
+                        <h4 data-i18n="common.technologies">Technologies</h4>
                         <div class="tech-tags">
                             <span class="tech-tag">HTML5</span>
                             <span class="tech-tag">CSS3</span>
                             <span class="tech-tag">JavaScript</span>
                             <span class="tech-tag">Animations</span>
                             <span class="tech-tag">Responsive Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Au val des roses -->
+    <div id="modal-au-val-des-roses" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closeModal('au-val-des-roses')">&times;</button>
+            
+            <!-- Header with wallpaper -->
+            <div class="popup-header">
+                <div class="popup-wallpaper" style="background-image: url('portfolio/vitrine.jpg');">
+                    <h2 class="popup-title">Au val des roses</h2>
+                </div>
+            </div>
+            
+            <!-- Logo positioned outside header -->
+            <div class="popup-logo">
+                <img src="portfolio/logo.png" alt="Au val des roses Logo">
+            </div>
+            
+            <!-- Content section -->
+            <div class="popup-body">
+                <div class="popup-main-content">
+                    <h3 data-i18n="common.aboutProject">À propos du projet</h3>
+                    <p class="popup-description">
+                        Site e-commerce réalisé pour un fleuriste. L’objectif était de valoriser l’univers de la boutique,
+                        présenter clairement les produits et proposer un parcours d’achat simple et rassurant.
+                    </p>
+                </div>
+                
+                <div class="popup-sidebar">
+                    <div class="popup-features">
+                        <h4 data-i18n="common.features">Fonctionnalités</h4>
+                        <ul>
+                            <li>Catalogue et fiches produits</li>
+                            <li>Mise en avant des créations et nouveautés</li>
+                            <li>Parcours d’achat fluide</li>
+                            <li>Design responsive</li>
+                            <li>Optimisation des performances et du SEO</li>
+                        </ul>
+                    </div>
+                    <div class="popup-tech">
+                        <h4 data-i18n="common.technologies">Technologies</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive Design</span>
+                            <span class="tech-tag">UX</span>
                         </div>
                     </div>
                 </div>
@@ -273,7 +369,7 @@
             <!-- Content section -->
             <div class="popup-body">
                 <div class="popup-main-content">
-                    <h3>À propos du projet</h3>
+                    <h3 data-i18n="common.aboutProject">À propos du projet</h3>
                     <p class="popup-description">
                         Plateforme web élégante pour une conciergerie haut de gamme offrant des services personnalisés. 
                         Interface sophistiquée reflétant le standing et la qualité des services proposés.
@@ -285,7 +381,7 @@
                 
                 <div class="popup-sidebar">
                     <div class="popup-features">
-                        <h4>Fonctionnalités</h4>
+                        <h4 data-i18n="common.features">Fonctionnalités</h4>
                         <ul>
                             <li>Interface premium et raffinée</li>
                             <li>Système de réservation en ligne</li>
@@ -295,7 +391,7 @@
                         </ul>
                     </div>
                     <div class="popup-tech">
-                        <h4>Technologies</h4>
+                        <h4 data-i18n="common.technologies">Technologies</h4>
                         <div class="tech-tags">
                             <span class="tech-tag">HTML5</span>
                             <span class="tech-tag">CSS3</span>
@@ -328,7 +424,7 @@
             <!-- Content section -->
             <div class="popup-body">
                 <div class="popup-main-content">
-                    <h3>À propos du projet</h3>
+                    <h3 data-i18n="common.aboutProject">À propos du projet</h3>
                     <p class="popup-description">
                         Application web innovante facilitant les transitions professionnelles et personnelles. 
                         Interface moderne avec des outils interactifs pour accompagner les utilisateurs dans leur parcours de changement.
@@ -340,7 +436,7 @@
                 
                 <div class="popup-sidebar">
                     <div class="popup-features">
-                        <h4>Fonctionnalités</h4>
+                        <h4 data-i18n="common.features">Fonctionnalités</h4>
                         <ul>
                             <li>Dashboard personnalisé</li>
                             <li>Outils d'évaluation interactifs</li>
@@ -350,7 +446,7 @@
                         </ul>
                     </div>
                     <div class="popup-tech">
-                        <h4>Technologies</h4>
+                        <h4 data-i18n="common.technologies">Technologies</h4>
                         <div class="tech-tags">
                             <span class="tech-tag">DIVI</span>
                             <span class="tech-tag">WORDPRESS</span>
@@ -536,7 +632,7 @@
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Navigation</h3>
+                    <h3 data-i18n="footer.navigation">Navigation</h3>
                     <div class="footer-nav-columns">
                         <div class="footer-nav-col">
                             <a href="apropos.html">À propos</a>
@@ -550,7 +646,7 @@
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Contact</h3>
+                    <h3 data-i18n="footer.contact">Contact</h3>
                     <a href="mailto:remi.sarro@gmail.com">remi.sarro@gmail.com</a><br>
                     <a href="tel:+33685139774">+33 6 85 13 97 74</a>
                     <div class="social-links">
@@ -565,7 +661,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Rémi Sarro. Tous droits réservés.</p>
+                <p>&copy; 2024 Rémi Sarro. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
             </div>
         </div>
     </footer>
