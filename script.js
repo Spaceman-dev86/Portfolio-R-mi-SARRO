@@ -33,6 +33,19 @@ const I18N_EN = {
     'nav.projects': 'Projects',
     'nav.contact': 'Contact',
 
+    // Card (carte.html)
+    'card.role': 'Freelance web developer',
+    'card.tag.website': 'Website',
+    'card.tag.ecommerce': 'E-commerce website',
+    'card.tag.app': 'Web application',
+    'card.addContact': 'Add to contacts',
+    'card.viewSite': 'View my website',
+    'card.phone': 'Phone',
+    'card.email': 'Email',
+    'card.linkedin': 'LinkedIn',
+    'card.viewProfile': 'View my profile',
+    'card.note': 'Scan, save, and keep my details to contact me easily.',
+
     // Common
     'common.viewProject': 'View project',
     'common.learnMore': 'Learn more',

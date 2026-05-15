@@ -15,6 +15,23 @@
             <div class="logo">
                 <img src="logo/web-designer.png" alt="Logo Rémi Sarro" class="logo-img">
             </div>
+
+            <div class="lang-switcher" id="lang-switcher">
+                <button class="lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="lang-code">FR</span>
+                    <span class="lang-chevron" aria-hidden="true">▾</span>
+                </button>
+                <div class="lang-menu" role="listbox" aria-label="Choisir la langue">
+                    <button class="lang-option" type="button" role="option" data-lang="fr" aria-selected="true">
+                        <span class="lang-flag" aria-hidden="true">🇫🇷</span>
+                        <span>Français</span>
+                    </button>
+                    <button class="lang-option" type="button" role="option" data-lang="en" aria-selected="false">
+                        <span class="lang-flag" aria-hidden="true">🇬🇧</span>
+                        <span>English</span>
+                    </button>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -28,42 +45,44 @@
                         </div>
                         <div class="carte-title">
                             <h1>Rémi Sarro</h1>
-                            <p class="carte-role">Développeur web freelance</p>
+                            <p class="carte-role" data-i18n="card.role">Développeur web freelance</p>
                         </div>
                     </div>
 
                     <div class="carte-tags" aria-label="Spécialités">
-                        <span class="carte-tag">Site web</span>
-                        <span class="carte-tag">Site e-commerce</span>
-                        <span class="carte-tag">Application</span>
+                        <span class="carte-tag" data-i18n="card.tag.website">Site web</span>
+                        <span class="carte-tag" data-i18n="card.tag.ecommerce">Site e-commerce</span>
+                        <span class="carte-tag" data-i18n="card.tag.app">Application</span>
                     </div>
 
                     <div class="carte-actions">
-                        <a class="btn btn-primary carte-cta" href="remi-sarro.vcf">Ajouter aux contacts</a>
-                        <a class="btn btn-outline carte-cta-secondary" href="index.html">Voir mon site</a>
+                        <a class="btn btn-primary carte-cta" href="remi-sarro.vcf" data-i18n="card.addContact">Ajouter aux contacts</a>
+                        <a class="btn btn-outline carte-cta-secondary" href="index.html" data-i18n="card.viewSite">Voir mon site</a>
                     </div>
 
                     <div class="carte-details">
                         <div class="carte-detail">
-                            <div class="carte-detail-label">Téléphone</div>
+                            <div class="carte-detail-label" data-i18n="card.phone">Téléphone</div>
                             <a class="carte-detail-value" href="tel:+33685139774">+33 6 85 13 97 74</a>
                         </div>
                         <div class="carte-detail">
-                            <div class="carte-detail-label">Email</div>
+                            <div class="carte-detail-label" data-i18n="card.email">Email</div>
                             <a class="carte-detail-value" href="mailto:remi.sarro@gmail.com">remi.sarro@gmail.com</a>
                         </div>
                         <div class="carte-detail">
-                            <div class="carte-detail-label">LinkedIn</div>
-                            <a class="carte-detail-value" href="https://www.linkedin.com/in/r%C3%A9mi-sarro-3b72231b8/" target="_blank" rel="noopener noreferrer">Voir mon profil</a>
+                            <div class="carte-detail-label" data-i18n="card.linkedin">LinkedIn</div>
+                            <a class="carte-detail-value" href="https://www.linkedin.com/in/r%C3%A9mi-sarro-3b72231b8/" target="_blank" rel="noopener noreferrer" data-i18n="card.viewProfile">Voir mon profil</a>
                         </div>
                     </div>
 
                     <div class="carte-note">
-                        <p>Scannez, enregistrez, et gardez mes informations pour me recontacter facilement.</p>
+                        <p data-i18n="card.note">Scannez, enregistrez, et gardez mes informations pour me recontacter facilement.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
