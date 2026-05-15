@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N;CHARSET=UTF-8:Sarro;Rémi;;;
+FN;CHARSET=UTF-8:Rémi Sarro
+TITLE:Développeur web freelance
+TEL;TYPE=CELL:+33685139774
+EMAIL;TYPE=INTERNET:remi.sarro@gmail.com
+URL:https://spaceman-dev86.github.io/Portfolio-R-mi-SARRO/
+NOTE:Site web / Site e-commerce / Application
+END:VCARD
