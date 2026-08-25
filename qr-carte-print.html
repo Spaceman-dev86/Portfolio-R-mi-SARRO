@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code — Carte de visite Rémi Sarro</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #f5f7fa;
+            color: #012665;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .print-card {
+            background: #fff;
+            border: 1px solid #dde4ee;
+            border-radius: 24px;
+            padding: 3rem;
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 12px 40px rgba(1, 38, 101, 0.08);
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #5a6b82;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .qr-wrap {
+            display: inline-block;
+            padding: 1rem;
+            background: #f5f7fa;
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+        }
+
+        .qr-wrap img {
+            display: block;
+            width: 280px;
+            height: 280px;
+        }
+
+        .url {
+            font-size: 0.8rem;
+            color: #5a6b82;
+            word-break: break-all;
+            line-height: 1.4;
+        }
+
+        .print-btn {
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 999px;
+            background: #012665;
+            color: #fff;
+            font-size: 0.95rem;
+            cursor: pointer;
+        }
+
+        .print-btn:hover {
+            background: #023a8a;
+        }
+
+        @media print {
+            body {
+                background: #fff;
+                padding: 0;
+            }
+
+            .print-card {
+                box-shadow: none;
+                border: none;
+                max-width: none;
+            }
+
+            .print-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-card">
+        <h1>Rémi Sarro</h1>
+        <p class="subtitle">Restons en contact — scannez pour accéder à ma carte de visite digitale</p>
+        <div class="qr-wrap">
+            <img src="images/qr-carte.png" width="280" height="280" alt="QR code vers la carte de visite digitale">
+        </div>
+        <p class="url">https://spaceman-dev86.github.io/Portfolio-R-mi-SARRO/carte.html</p>
+        <button class="print-btn" type="button" onclick="window.print()">Imprimer</button>
+    </div>
+</body>
+</html>

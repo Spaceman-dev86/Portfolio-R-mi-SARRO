@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initLanguageSwitcher();
     initScrollAnimations();
     initContactForm();
+    initContactQrCode();
     initSkillsAnimations();
     initProjectsFilter();
     initScrollToTop();
@@ -34,7 +35,7 @@ const I18N_EN = {
     'nav.contact': 'Contact',
 
     // Card (carte.html)
-    'card.role': 'Freelance web developer',
+    'card.role': 'Freelance Product Builder',
     'card.tag.website': 'Website',
     'card.tag.ecommerce': 'E-commerce website',
     'card.tag.app': 'Web application',
@@ -66,7 +67,7 @@ const I18N_EN = {
     'footer.rights': 'All rights reserved.',
 
     // Index (Home)
-    'home.subtitle': 'Full-Stack Developer / Project Manager',
+    'home.subtitle': 'Product Builder / Freelance Project Manager',
     'home.heroDescription': "Like an astronaut, I turn your ideas into rockets ready to explore the universe of the web.",
     'home.whoAmI': 'Who am I?',
     'home.quickAboutP1': 'Engineer by training with a passion for web development and quality assurance. I combine technical expertise and creativity to build innovative, robust web solutions.',
@@ -82,7 +83,7 @@ const I18N_EN = {
     'home.ctaText': "Let’s turn your ideas into digital reality. Contact me to discuss your project.",
 
     // Home footer intro
-    'home.footerRole': 'Project manager & Web developer',
+    'home.footerRole': 'Product Builder & Project manager',
     'home.footerMission': 'Turning ideas into innovative web solutions',
 
     // About page
@@ -104,7 +105,7 @@ const I18N_EN = {
     'about.highlightPrecisionText': 'A meticulous approach inherited from my engineering training',
     'about.highlightExcellenceTitle': 'Excellence',
     'about.highlightExcellenceText': 'Total commitment to quality and client satisfaction',
-    'about.tl1Title': 'Freelance Web Developer',
+    'about.tl1Title': 'Freelance Product Builder',
     'about.tl1Text': 'Launch of my web development activity, with a focus on building showcase websites and modern web applications.',
     'about.tl2Title': 'Project Manager — Safran Aerosystems',
     'about.tl2Text': 'Equipment definition updates for international clients and internal PLM data processing tools.',
@@ -123,9 +124,9 @@ const I18N_EN = {
     'about.value3Text': 'The web evolves constantly. I keep learning to stay at the cutting edge.',
     'about.value4Title': 'Performance',
     'about.value4Text': 'A fast website is a website that converts. Optimization is always a priority.',
-    'about.personalP1': 'When I’m not deep in code, you’ll probably find me looking up at the starry sky or pushing my limits on a sports field. One invites me to dream bigger; the other to challenge myself every day.',
-    'about.personalP2': 'Passionate about astronomy and sports, I see each web project as a careful exploration—a trajectory to define and a precise landing. Sports teach me rigor, endurance and a taste for challenge, qualities I bring into my work.',
-    'about.personalP3': 'This passion for exploration and discovery fuels my creativity and inspires each of my professional projects.',
+    'about.personalP1': 'When I’m not deep in code, sport plays a central role in my journey. Passionate about fitness and performance, I had the opportunity to contribute to the design of gym facilities abroad — an experience that gave me a grounded understanding of real-world sports environments.',
+    'about.personalP2': 'Today, I channel that passion into digital products by building mobile applications alongside sports coaches. These collaborations have helped me understand the practical needs of athletes and professionals, and to design useful, intuitive tools focused on results.',
+    'about.personalP3': 'This is the direction I want to take my development work: building sport-focused applications that combine technical rigor, a polished user experience, and a tangible impact on everyday practice.',
 
     // Skills page
     'skills.title': 'My skills',
@@ -226,6 +227,8 @@ const I18N_EN = {
     'contact.socialLinkedin': 'Professional profile',
     'contact.socialGithub': 'My code projects',
     'contact.socialCv': 'Download my resume',
+    'contact.qrTitle': 'Let’s stay in touch',
+    'contact.qrText': 'Scan this QR code to access my digital business card.',
     'contact.faqTitle': 'Frequently asked questions',
     'contact.faq1Q': 'What types of projects do you build?',
     'contact.faq1A': 'I build showcase websites, web applications, e-commerce platforms, and I also provide QA testing services. Every project is tailored to the client’s needs.',
@@ -505,6 +508,24 @@ function initContactForm() {
     formInputs.forEach(input => {
         input.addEventListener('blur', () => validateField(input));
         input.addEventListener('input', () => clearFieldError(input));
+    });
+}
+
+function initContactQrCode() {
+    const container = document.getElementById('contact-qrcode');
+    if (!container || typeof QRCode === 'undefined') return;
+
+    const carteUrl = 'https://spaceman-dev86.github.io/Portfolio-R-mi-SARRO/carte.html';
+
+    container.innerHTML = '';
+
+    new QRCode(container, {
+        text: carteUrl,
+        width: 140,
+        height: 140,
+        colorDark: '#012665',
+        colorLight: '#ffffff',
+        correctLevel: QRCode.CorrectLevel.M
     });
 }
 
