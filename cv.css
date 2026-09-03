@@ -1,0 +1,328 @@
+/* ══════════════════════════════════════════
+   CV Page — Rémi Sarro
+   Layout fidèle au PDF original (sidebar + main)
+   ══════════════════════════════════════════ */
+
+*,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 12.5px;
+    line-height: 1.4;
+    color: #333;
+    background: #e9ecef;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+/* ── A4-ish page ── */
+.cv-page {
+    display: flex;
+    width: 900px;
+    max-width: 100%;
+    min-height: 1270px;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0,0,0,.12);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* ══ SIDEBAR ══ */
+.cv-sidebar {
+    width: 280px;
+    min-width: 280px;
+    background: #edeff2;
+    color: #333;
+    padding: 0 1.2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.05rem;
+    border-bottom-right-radius: 48px;
+}
+
+/* ── Swoosh + nom (haut de la sidebar) ── */
+.cv-swoosh {
+    position: relative;
+    margin: 0 -1.2rem .2rem;
+    padding: 1.55rem 1.15rem 1.15rem 4.4rem;
+    min-height: 132px;
+    overflow: hidden;
+}
+
+.cv-swoosh-wave {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.cv-swoosh h1 {
+    position: relative;
+    z-index: 1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.15rem;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.05;
+    text-align: right;
+    letter-spacing: .03em;
+}
+
+.cv-swoosh-last,
+.cv-swoosh-first {
+    display: block;
+    font-weight: 800;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+}
+
+.cv-sidebar-section:first-of-type {
+    margin-top: .15rem;
+}
+
+.cv-sidebar h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #012665;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: .2rem;
+    margin-bottom: .35rem;
+}
+
+.cv-sidebar h4 {
+    font-size: .78rem;
+    margin-bottom: .25rem;
+    color: #012665;
+}
+
+.cv-contact-list,
+.cv-skills-list {
+    list-style: none;
+    font-size: .75rem;
+    line-height: 1.5;
+}
+.cv-contact-list a {
+    color: #012665;
+    text-decoration: none;
+}
+.cv-contact-list a:hover { text-decoration: underline; }
+
+.cv-skills-list li { margin-bottom: .3rem; }
+.cv-skills-list strong { color: #012665; }
+
+.cv-competences-grid {
+    display: flex;
+    gap: 1rem;
+}
+.cv-competences-grid ul {
+    list-style: none;
+    font-size: .72rem;
+    line-height: 1.5;
+}
+
+.cv-bar {
+    height: 6px;
+    background: #ccc;
+    border-radius: 3px;
+    margin-top: .35rem;
+}
+.cv-bar-fill {
+    height: 100%;
+    background: #012665;
+    border-radius: 3px;
+}
+
+.cv-sidebar-section p {
+    font-size: .75rem;
+    line-height: 1.45;
+}
+
+/* ── QR code ── */
+.cv-qr-wrap {
+    margin-top: .4rem;
+    text-align: center;
+}
+.cv-qr-wrap img { border-radius: 4px; }
+
+/* ══ MAIN ══ */
+.cv-main {
+    flex: 1;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cv-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.cv-tagline {
+    display: flex;
+    flex-direction: column;
+    gap: .28rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #012665;
+}
+
+.cv-tagline span {
+    display: block;
+}
+.cv-header-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #012665;
+    flex-shrink: 0;
+}
+
+.cv-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #012665;
+    line-height: 1.1;
+}
+.cv-header h1 span {
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.cv-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #012665;
+    border-bottom: 2px solid #012665;
+    padding-bottom: .2rem;
+    margin-bottom: .6rem;
+}
+
+.cv-profil p {
+    font-size: .78rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+/* ── Entries (timeline-style) ── */
+.cv-entry {
+    display: flex;
+    gap: .7rem;
+    margin-bottom: .55rem;
+}
+.cv-entry-date {
+    min-width: 80px;
+    font-size: .72rem;
+    font-weight: 600;
+    color: #012665;
+    padding-top: .12rem;
+}
+.cv-entry-body h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .78rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: .1rem;
+}
+.cv-company {
+    font-size: .72rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: .2rem;
+}
+.cv-entry-body ul {
+    margin-left: .8rem;
+    font-size: .73rem;
+    line-height: 1.45;
+    color: #444;
+}
+.cv-entry-body p {
+    font-size: .73rem;
+    color: #444;
+}
+
+/* ══ FLOATING DOWNLOAD BUTTON ══ */
+.cv-download-fab {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background: #012665;
+    color: #fff;
+    padding: .7rem 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .85rem;
+    font-weight: 600;
+    box-shadow: 0 4px 16px rgba(1,38,101,.35);
+    transition: transform .2s, box-shadow .2s;
+    z-index: 100;
+}
+.cv-download-fab:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(1,38,101,.45);
+}
+.cv-download-fab svg { flex-shrink: 0; }
+
+/* ══ PRINT ══ */
+@page { size: A4; margin: 0; }
+
+@media print {
+    html, body {
+        width: 210mm;
+        height: 297mm;
+        background: #fff;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+    .cv-page {
+        box-shadow: none;
+        border-radius: 0;
+        width: 210mm;
+        height: 297mm;
+        min-height: 297mm;
+        max-height: 297mm;
+        overflow: hidden;
+    }
+    .cv-sidebar,
+    .cv-swoosh,
+    .cv-swoosh-wave {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    .cv-bar, .cv-bar-fill {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    .cv-download-fab { display: none !important; }
+}
+
+/* ══ RESPONSIVE ══ */
+@media (max-width: 700px) {
+    .cv-page {
+        flex-direction: column;
+        min-height: auto;
+    }
+    .cv-sidebar {
+        width: 100%;
+        min-width: auto;
+    }
+    .cv-entry { flex-direction: column; gap: .2rem; }
+    .cv-entry-date { min-width: auto; }
+}

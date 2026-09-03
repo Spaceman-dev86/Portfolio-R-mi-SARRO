@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>CV — Rémi Sarro</title>
+    <link rel="stylesheet" href="cv.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Bouton télécharger flottant -->
+<button type="button" class="cv-download-fab" title="Télécharger le CV en PDF" onclick="window.print()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+    Télécharger PDF
+</button>
+
+<div class="cv-page">
+
+    <!-- ═══ SIDEBAR ═══ -->
+    <aside class="cv-sidebar">
+        <div class="cv-swoosh">
+            <svg class="cv-swoosh-wave" viewBox="0 0 280 150" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0 0 V78 C12 82 28 70 46 48 C68 22 92 8 128 0 H280 Z" fill="#fff"/>
+            </svg>
+            <h1 contenteditable="true">
+                <span class="cv-swoosh-last">SARRO</span>
+                <span class="cv-swoosh-first">Rémi</span>
+            </h1>
+        </div>
+
+        <div class="cv-sidebar-section">
+            <h3>Contact</h3>
+            <ul class="cv-contact-list" contenteditable="true">
+                <li>📍 Lyon 7ème</li>
+                <li>📞 +33 (0)6 85 13 97 74</li>
+                <li>✉️ remi.sarro@gmail.com</li>
+            </ul>
+        </div>
+
+        <div class="cv-sidebar-section">
+            <h3>Langues</h3>
+            <p contenteditable="true">Anglais : Courant — 100%</p>
+            <div class="cv-bar"><div class="cv-bar-fill" style="width:100%"></div></div>
+        </div>
+
+        <div class="cv-sidebar-section">
+            <h3>Logiciels</h3>
+            <ul class="cv-skills-list" contenteditable="true">
+                <li><strong>React</strong> — Création d'application web</li>
+                <li><strong>Divi / WordPress</strong> — Création de site web</li>
+                <li><strong>HTML / CSS</strong> — Création et mise en forme de site internet, Responsive design</li>
+                <li><strong>JavaScript</strong> — Animation dynamique</li>
+                <li><strong>Python</strong> — Boucle d'itération de test</li>
+            </ul>
+        </div>
+
+        <div class="cv-sidebar-section">
+            <h3>Compétences</h3>
+            <div class="cv-competences-grid" contenteditable="true">
+                <div>
+                    <h4>Techniques</h4>
+                    <ul>
+                        <li>Conception web</li>
+                        <li>Créativité</li>
+                        <li>Gestion de projet</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Humaines</h4>
+                    <ul>
+                        <li>Pro actif</li>
+                        <li>Adaptabilité</li>
+                        <li>Esprit d'équipe</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="cv-sidebar-section">
+            <h3>Liens</h3>
+            <ul class="cv-contact-list">
+                <li><a href="https://www.linkedin.com/in/r%C3%A9mi-sarro/" target="_blank">linkedin.com/in/rémi-sarro</a></li>
+            </ul>
+            <p style="margin-top:.3rem; font-weight:600;">Mon site :</p>
+            <div class="cv-qr-wrap" id="cv-qrcode"></div>
+        </div>
+
+        <div class="cv-sidebar-section">
+            <h3>Loisirs</h3>
+            <div contenteditable="true">
+                <p>Judo (ceinture noire)</p>
+                <p>Triathlon</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ═══ MAIN CONTENT ═══ -->
+    <main class="cv-main">
+
+        <header class="cv-header">
+            <div class="cv-header-row">
+                <div class="cv-tagline" contenteditable="true">
+                    <span>Ingénieur Arts et Métiers</span>
+                    <span>Product Builder</span>
+                    <span>Anglais courant</span>
+                </div>
+                <img src="cv/stiker CV.png" alt="Rémi Sarro" class="cv-header-photo">
+            </div>
+        </header>
+
+        <section class="cv-section cv-profil">
+            <h2>Profil et objectifs</h2>
+            <p contenteditable="true">Ingénieur chef de projet pendant trois ans, j'ai développé une solide expertise en gestion technique et coordination d'équipes. Aujourd'hui, je souhaite évoluer vers un poste de Product Builder, afin de mettre à profit mes compétences en développement web et en pilotage stratégique pour accompagner des projets digitaux ambitieux.</p>
+        </section>
+
+        <section class="cv-section">
+            <h2>Expériences professionnelles</h2>
+
+            <div class="cv-entry">
+                <div class="cv-entry-date" contenteditable="true">Fév. 2025</div>
+                <div class="cv-entry-body" contenteditable="true">
+                    <h3>Technical Project Manager</h3>
+                    <p class="cv-company">ALTEN SA — SAFRAN Aerosystems — RLM</p>
+                    <ul>
+                        <li>Création d'application web de traitement de données (Python)</li>
+                        <li>Gestion multi-projets (70)</li>
+                        <li>Suivi de projets avec clients internationaux</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-date" contenteditable="true">2025</div>
+                <div class="cv-entry-body" contenteditable="true">
+                    <h3>Développeur web — Spaceman Local Marketing</h3>
+                    <ul>
+                        <li>Création d'un site personnalisé (HTML / CSS / JavaScript)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-date" contenteditable="true">Juin 2025</div>
+                <div class="cv-entry-body" contenteditable="true">
+                    <h3>Développeur web — Brebis Brigasque</h3>
+                    <ul>
+                        <li>Remise en ligne du site de 2019</li>
+                        <li>Modification et création de nouvelles pages</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-date" contenteditable="true">Janv. 2025</div>
+                <div class="cv-entry-body" contenteditable="true">
+                    <h3>Développeur web — Conciergerie Échappée Provençale</h3>
+                    <ul>
+                        <li>Création d'un site web personnalisé (Divi / WordPress / CSS)</li>
+                        <li>Hébergement / maintenance (PHP)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-date" contenteditable="true">2022 – 2024</div>
+                <div class="cv-entry-body" contenteditable="true">
+                    <h3>VIE Chef de projet conception</h3>
+                    <p class="cv-company">Plastic Omnium, Pune — Inde</p>
+                    <ul>
+                        <li>Chef de projet technique (qualité / coût / délais)</li>
+                        <li>Gestion d'une équipe projet en anglais</li>
+                        <li>Maîtrise du logiciel de CAO Catia</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-date" contenteditable="true">2021</div>
+                <div class="cv-entry-body" contenteditable="true">
+                    <h3>Ingénieur méthode / amélioration continue</h3>
+                    <p class="cv-company">Biometal Guyane</p>
+                    <ul>
+                        <li>Gestion de projets d'amélioration continue (5S)</li>
+                        <li>Gestion d'une équipe projet en anglais</li>
+                        <li>Création d'un programme de gestion de production (10-20 produits finis)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <h2>Formations</h2>
+
+            <div class="cv-entry">
+                <div class="cv-entry-date" contenteditable="true">2025</div>
+                <div class="cv-entry-body" contenteditable="true">
+                    <h3>Formation React</h3>
+                    <p>Développement d'application web</p>
+                </div>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-date" contenteditable="true">2024</div>
+                <div class="cv-entry-body" contenteditable="true">
+                    <h3>Formation développeur (HTML, CSS, JavaScript)</h3>
+                    <p>Multiples projets en parallèle pour approfondir mes connaissances</p>
+                </div>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-date" contenteditable="true">2018 – 2022</div>
+                <div class="cv-entry-body" contenteditable="true">
+                    <h3>Diplôme Ingénieur Arts et Métiers, Bordeaux (33)</h3>
+                    <ul>
+                        <li>Gestion et création de salle de sport universitaire</li>
+                        <li>Concours Arts et Métiers pour la transition énergétique</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-date" contenteditable="true">2015 – 2018</div>
+                <div class="cv-entry-body" contenteditable="true">
+                    <h3>Classe préparatoire, Nîmes (30)</h3>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+new QRCode(document.getElementById('cv-qrcode'), {
+    text: 'https://spaceman-dev86.github.io/Portfolio-R-mi-SARRO/index.html',
+    width: 80,
+    height: 80,
+    colorDark: '#333',
+    colorLight: 'transparent',
+    correctLevel: QRCode.CorrectLevel.M
+});
+</script>
+</body>
+</html>
