@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projets - Rémi Sarro | Portfolio Product Builder</title>
-    <meta name="description" content="Découvrez les projets web de Rémi Sarro : Spaceman, Conciergerie, Robbie Lens et plus. Portfolio de développement web et applications modernes.">
+    <meta name="description" content="Découvrez les projets web de Rémi Sarro : Spaceman, Socle, Robbie Lens et plus. Portfolio de développement web et applications modernes.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="projets.css">
     <link rel="icon" type="image/png" href="logo/web-designer.png">
@@ -96,27 +96,51 @@
                         </div>
                     </div>
 
-                    <!-- Au val des roses Project -->
-                    <div class="project-item fade-in-up" data-category="web">
+                    <!-- Trainly Project -->
+                    <div class="project-item fade-in-up" data-category="app">
                         <div class="project-card">
                             <div class="project-image">
-                                <img src="portfolio/logo.png" alt="Projet Au val des roses">
+                                <img src="portfolio/trainly.svg?v=3" alt="Projet Trainly">
                                 <div class="project-overlay">
                                     <div class="project-actions">
-                                        <button class="btn btn-primary" onclick="openModal('au-val-des-roses')" data-i18n="common.viewProject">Voir le projet</button>
+                                        <button class="btn btn-primary" onclick="openModal('trainly')" data-i18n="common.viewProject">Voir le projet</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="project-info">
-                                <div class="project-category" data-i18n="projects.category.ecommerce">E-commerce</div>
-                                <h3>Au val des roses</h3>
-                                <p data-i18n="projects.auvalText">Site e-commerce pour fleuriste : catalogue produits, mise en avant des créations et parcours d’achat optimisé.</p>
+                                <div class="project-category" data-i18n="projects.category.app">Application</div>
+                                <h3>Trainly</h3>
+                                <p data-i18n="projects.trainlyText">SaaS coach–client : programmes personnalisés, messagerie pro, calendrier RDV et portail white-label.</p>
                                 <div class="project-tech">
-                                    <span class="tech-tag">HTML5</span>
-                                    <span class="tech-tag">CSS3</span>
-                                    <span class="tech-tag">JavaScript</span>
-                                    <span class="tech-tag">Responsive Design</span>
-                                    <span class="tech-tag">UX</span>
+                                    <span class="tech-tag">Next.js</span>
+                                    <span class="tech-tag">TypeScript</span>
+                                    <span class="tech-tag">Supabase</span>
+                                    <span class="tech-tag">QA</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Socle Project -->
+                    <div class="project-item fade-in-up" data-category="web">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="portfolio/socle.png" alt="Projet Socle">
+                                <div class="project-overlay">
+                                    <div class="project-actions">
+                                        <button class="btn btn-primary" onclick="openModal('socle')" data-i18n="common.viewProject">Voir le projet</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-category" data-i18n="projects.category.webapp">Application web</div>
+                                <h3>Socle</h3>
+                                <p data-i18n="projects.socleText">Plateforme React que j’ai conçue : CMS, SEO et analytics pour sites codés — créativité du code, facilité d’un back office.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Docker</span>
+                                    <span class="tech-tag">Neon</span>
+                                    <span class="tech-tag">QA</span>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +150,7 @@
                     <div class="project-item fade-in-up" data-category="web">
                         <div class="project-card">
                             <div class="project-image">
-                                <img src="portfolio/conciergerie.png" alt="Projet Conciergerie">
+                                <img src="portfolio/conciergerie.png" alt="Projet Conciergerie L'Échappée">
                                 <div class="project-overlay">
                                     <div class="project-actions">
                                         <button class="btn btn-primary" onclick="openModal('conciergerie')" data-i18n="common.viewProject">Voir le projet</button>
@@ -135,13 +159,13 @@
                             </div>
                             <div class="project-info">
                                 <div class="project-category" data-i18n="projects.category.website">Site Web</div>
-                                <h3>Conciergerie</h3>
+                                <h3>Conciergerie L'Échappée</h3>
                                 <p data-i18n="projects.conciergerieText">Plateforme de services de conciergerie avec système de gestion avancé et interface administrateur.</p>
                                 <div class="project-tech">
-                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">WordPress</span>
                                     <span class="tech-tag">CSS3</span>
                                     <span class="tech-tag">JavaScript</span>
-                                    <span class="tech-tag">Hebergement</span>
+                                    <span class="tech-tag">Hébergement</span>
                                 </div>
                             </div>
                         </div>
@@ -168,6 +192,31 @@
                                     <span class="tech-tag">JavaScript</span>
                                     <span class="tech-tag">Galerie</span>
                                     <span class="tech-tag">Responsive Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Safran Aerosystems Project -->
+                    <div class="project-item fade-in-up" data-category="app">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="portfolio/safran.png" alt="Projet Safran Aerosystems" style="object-fit: contain; background: #fff; padding: 1.5rem;">
+                                <div class="project-overlay">
+                                    <div class="project-actions">
+                                        <button class="btn btn-primary" onclick="openModal('safran')" data-i18n="common.viewProject">Voir le projet</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-category" data-i18n="projects.category.app">Application</div>
+                                <h3>Safran Aerosystems</h3>
+                                <p data-i18n="projects.safranText">Initiative personnelle : logiciel de gestion documentaire pour une base de données interne (type CRM métier).</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">API REST</span>
                                 </div>
                             </div>
                         </div>
@@ -299,33 +348,32 @@
         </div>
     </div>
 
-    <!-- Modal Au val des roses -->
-    <div id="modal-au-val-des-roses" class="popup-overlay">
+    <!-- Modal Socle -->
+    <div id="modal-socle" class="popup-overlay">
         <div class="popup-content">
-            <button class="popup-close" onclick="closeModal('au-val-des-roses')">&times;</button>
+            <button class="popup-close" onclick="closeModal('socle')">&times;</button>
             
             <!-- Header with wallpaper -->
             <div class="popup-header">
-                <div class="popup-wallpaper" style="background-image: url('portfolio/vitrine.jpg');">
-                    <h2 class="popup-title">Au val des roses</h2>
+                <div class="popup-wallpaper" style="background-image: url('portfolio/socle.png');">
+                    <h2 class="popup-title">Socle</h2>
                 </div>
             </div>
             
             <!-- Logo positioned outside header -->
             <div class="popup-logo">
-                <img src="portfolio/logo.png" alt="Au val des roses Logo">
+                <img src="portfolio/socle.png" alt="Socle Logo">
             </div>
             
             <!-- Content section -->
             <div class="popup-body">
                 <div class="popup-main-content">
                     <h3 data-i18n="common.aboutProject">À propos du projet</h3>
-                    <p class="popup-description">
-                        Site e-commerce réalisé pour un fleuriste. L’objectif était de valoriser l’univers de la boutique,
-                        présenter clairement les produits et proposer un parcours d’achat simple et rassurant.
+                    <p class="popup-description" data-i18n="projects.socleAbout">
+                        Socle est une plateforme que j’ai conçue et développée de A à Z : le « WordPress des sites codés ». Objectif — garder la liberté créative d’un site sur mesure, avec un back office simple pour éditer contenu, SEO et analytics. Une vraie app produit, pensée pour évoluer, avec analyse QA pour garantir la qualité à chaque livraison.
                     </p>
                     <p class="popup-link">
-                        <a href="https://spaceman-dev86.github.io/Au_Val_des_Roses/boutique" target="_blank" rel="noopener noreferrer">Au val des roses</a>
+                        <a href="https://socle-three.vercel.app/accueil" target="_blank" rel="noopener noreferrer">socle-three.vercel.app</a>
                     </p>
                 </div>
                 
@@ -333,21 +381,22 @@
                     <div class="popup-features">
                         <h4 data-i18n="common.features">Fonctionnalités</h4>
                         <ul>
-                            <li>Catalogue et fiches produits</li>
-                            <li>Mise en avant des créations et nouveautés</li>
-                            <li>Parcours d’achat fluide</li>
-                            <li>Design responsive</li>
-                            <li>Optimisation des performances et du SEO</li>
+                            <li data-i18n="projects.socleFeat1">App React full-stack, architecturée de bout en bout</li>
+                            <li data-i18n="projects.socleFeat2">Données & infra : Docker + Neon (PostgreSQL)</li>
+                            <li data-i18n="projects.socleFeat3">Dev accéléré à l’IA avec Cursor</li>
+                            <li data-i18n="projects.socleFeat4">Back office SEO, liens traqués & analytics</li>
+                            <li data-i18n="projects.socleFeat5">Produit livré de l’idée au déploiement</li>
+                            <li data-i18n="projects.socleFeat6">Analyse QA et validation des parcours</li>
                         </ul>
                     </div>
                     <div class="popup-tech">
                         <h4 data-i18n="common.technologies">Technologies</h4>
                         <div class="tech-tags">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Responsive Design</span>
-                            <span class="tech-tag">UX</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Neon</span>
+                            <span class="tech-tag">Cursor</span>
+                            <span class="tech-tag">QA</span>
                         </div>
                     </div>
                 </div>
@@ -360,28 +409,25 @@
         <div class="popup-content">
             <button class="popup-close" onclick="closeModal('conciergerie')">&times;</button>
             
-            <!-- Header with wallpaper -->
             <div class="popup-header">
                 <div class="popup-wallpaper" style="background-image: url('portfolio/conciergerie-wall.png');">
-                    <h2 class="popup-title">Conciergerie de Luxe</h2>
+                    <h2 class="popup-title">Conciergerie L'Échappée</h2>
                 </div>
             </div>
             
-            <!-- Logo positioned outside header -->
             <div class="popup-logo">
                 <img src="portfolio/conciergerie.png" alt="Conciergerie Logo">
             </div>
             
-            <!-- Content section -->
             <div class="popup-body">
                 <div class="popup-main-content">
                     <h3 data-i18n="common.aboutProject">À propos du projet</h3>
                     <p class="popup-description">
-                        Plateforme web élégante pour une conciergerie haut de gamme offrant des services personnalisés. 
+                        Plateforme web élégante pour une conciergerie haut de gamme offrant des services personnalisés.
                         Interface sophistiquée reflétant le standing et la qualité des services proposés.
                     </p>
                     <p class="popup-link">
-                        <a href="https://conciergerie-lechappee.com/" target="_blank" rel="noopener noreferrer">conciergerie</a>
+                        <a href="https://conciergerie-lechappee.com/" target="_blank" rel="noopener noreferrer">conciergerie-lechappee.com</a>
                     </p>
                 </div>
                 
@@ -393,16 +439,16 @@
                             <li>Système de réservation en ligne</li>
                             <li>Galerie de services interactive</li>
                             <li>Espace client personnalisé</li>
-                            <li>Integration de paiement sécurisé</li>
+                            <li>Hébergement et maintenance</li>
                         </ul>
                     </div>
                     <div class="popup-tech">
                         <h4 data-i18n="common.technologies">Technologies</h4>
                         <div class="tech-tags">
-                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">WordPress</span>
+                            <span class="tech-tag">Divi</span>
                             <span class="tech-tag">CSS3</span>
                             <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Hebergement</span>
                         </div>
                     </div>
                 </div>
@@ -458,6 +504,107 @@
                             <span class="tech-tag">WORDPRESS</span>
                             <span class="tech-tag">CSS3</span>
                             <span class="tech-tag">Hebergement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Safran Aerosystems -->
+    <div id="modal-safran" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closeModal('safran')">&times;</button>
+            
+            <div class="popup-header">
+                <div class="popup-wallpaper" style="background-image: linear-gradient(135deg, #0a2a5c, #1a5fb4);">
+                    <h2 class="popup-title">Safran Aerosystems</h2>
+                </div>
+            </div>
+            
+            <div class="popup-logo">
+                <img src="portfolio/safran.png" alt="Safran Logo">
+            </div>
+            
+            <div class="popup-body">
+                <div class="popup-main-content">
+                    <h3 data-i18n="common.aboutProject">À propos du projet</h3>
+                    <p class="popup-description" data-i18n="projects.safranAbout">
+                        Initiative personnelle menée chez Safran Aerosystems : un logiciel de gestion documentaire branché sur la base de données interne, proche d’un CRM métier. Objectif — centraliser les documents, fiabiliser le suivi des données et accélérer le travail des équipes projet.
+                    </p>
+                </div>
+                
+                <div class="popup-sidebar">
+                    <div class="popup-features">
+                        <h4 data-i18n="common.features">Fonctionnalités</h4>
+                        <ul>
+                            <li data-i18n="projects.safranFeat1">Initiative personnelle, portée de A à Z</li>
+                            <li data-i18n="projects.safranFeat2">Gestion documentaire liée à la BDD interne</li>
+                            <li data-i18n="projects.safranFeat3">Suivi type CRM (données, statuts, recherche)</li>
+                            <li data-i18n="projects.safranFeat4">Interface web pour les équipes métier</li>
+                            <li data-i18n="projects.safranFeat5">Recherche et structuration des données métier</li>
+                        </ul>
+                    </div>
+                    <div class="popup-tech">
+                        <h4 data-i18n="common.technologies">Technologies</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">API REST</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Trainly -->
+    <div id="modal-trainly" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closeModal('trainly')">&times;</button>
+            
+            <div class="popup-header">
+                <div class="popup-wallpaper popup-wallpaper--violet" style="background-image: url('portfolio/trainly-wall.svg'); background-color: #d6c4e8;">
+                    <h2 class="popup-title">Trainly</h2>
+                </div>
+            </div>
+            
+            <div class="popup-logo">
+                <img src="portfolio/trainly-logo.svg" alt="Trainly Logo">
+            </div>
+            
+            <div class="popup-body">
+                <div class="popup-main-content">
+                    <h3 data-i18n="common.aboutProject">À propos du projet</h3>
+                    <p class="popup-description" data-i18n="projects.trainlyAbout">
+                        Trainly est une app SaaS encore en création, conçue pour les coachs sportifs : programmes personnalisés, suivi client et espace white-label. Full-stack Next.js (App Router) + TypeScript + Supabase — une base type-safe, sécurisée et scalable, accélérée par une conception IA-assistée (agents Cursor), avec analyse QA pour fiabiliser chaque parcours.
+                    </p>
+                    <p class="popup-link">
+                        <a href="https://trainly-sable.vercel.app/" target="_blank" rel="noopener noreferrer">trainly-sable.vercel.app</a>
+                    </p>
+                </div>
+                
+                <div class="popup-sidebar">
+                    <div class="popup-features">
+                        <h4 data-i18n="common.features">Fonctionnalités</h4>
+                        <ul>
+                            <li data-i18n="projects.trainlyFeat1">Programmes perso & catalogue coach</li>
+                            <li data-i18n="projects.trainlyFeat2">Messagerie pro (groupes, médias, réactions, read receipts)</li>
+                            <li data-i18n="projects.trainlyFeat3">Calendrier RDV, Drive & notifs</li>
+                            <li data-i18n="projects.trainlyFeat4">Portail white-label coach–client</li>
+                            <li data-i18n="projects.trainlyFeat5">Supabase : Postgres, RLS, Realtime, Storage</li>
+                            <li data-i18n="projects.trainlyFeat6">Analyse QA des parcours critiques</li>
+                        </ul>
+                    </div>
+                    <div class="popup-tech">
+                        <h4 data-i18n="common.technologies">Technologies</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Supabase</span>
+                            <span class="tech-tag">Cursor</span>
+                            <span class="tech-tag">QA</span>
                         </div>
                     </div>
                 </div>

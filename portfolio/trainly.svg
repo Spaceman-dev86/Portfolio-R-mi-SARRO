@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img" aria-label="Trainly">
+  <defs>
+    <linearGradient id="trainlyBg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="45%" stop-color="#d6c4e8"/>
+      <stop offset="100%" stop-color="#9b6bb8"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#trainlyBg)"/>
+  <text x="320" y="225" text-anchor="middle" dominant-baseline="middle" fill="#341c44" font-family="Montserrat, Arial, Helvetica, sans-serif" font-size="78" font-weight="800">Trainly</text>
+</svg>

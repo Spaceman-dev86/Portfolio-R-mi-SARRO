@@ -145,35 +145,38 @@
                     
                     <div class="project-card fade-in-up">
                         <div class="project-image">
-                            <img src="portfolio/conciergerie.png" alt="Projet Conciergerie">
+                            <img src="portfolio/socle.png" alt="Projet Socle">
                             <div class="project-overlay">
-                                <button class="btn btn-primary" onclick="openModal('conciergerie')" data-i18n="common.viewProject">Voir le projet</button>
+                                <button class="btn btn-primary" onclick="openModal('socle')" data-i18n="common.viewProject">Voir le projet</button>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3>Conciergerie</h3>
-                            <p data-i18n="home.conciergerieDesc">Plateforme de services avec système de gestion avancé</p>
+                            <h3>Socle</h3>
+                            <p data-i18n="home.socleDesc">Plateforme React que j’ai conçue : CMS, SEO et analytics pour sites codés</p>
                             <div class="project-tech">
-                                <span class="tech-tag">Interactifs design</span>
-                                <span class="tech-tag">Hebergement</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Neon</span>
+                                <span class="tech-tag">QA</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="project-card fade-in-up">
                         <div class="project-image">
-                            <img src="portfolio/brebis.png" alt="Projet Brebis Brigasque">
+                            <img src="portfolio/trainly.svg?v=3" alt="Projet Trainly">
                             <div class="project-overlay">
-                                <button class="btn btn-primary" onclick="openModal('brebis')" data-i18n="common.viewProject">Voir le projet</button>
+                                <button class="btn btn-primary" onclick="openModal('trainly')" data-i18n="common.viewProject">Voir le projet</button>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3>Brebis Brigasque</h3>
-                            <p data-i18n="home.brebisDesc">Site web pour la promotion du patrimoine local et des traditions</p>
+                            <h3>Trainly</h3>
+                            <p data-i18n="home.trainlyDesc">SaaS coach–client : programmes perso, messagerie et portail white-label</p>
                             <div class="project-tech">
-                                <span class="tech-tag">Data base</span>
-                                <span class="tech-tag">PHP</span>
-                                <span class="tech-tag">Maintenance</span>
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">Supabase</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">QA</span>
                             </div>
                         </div>
                     </div>
@@ -298,33 +301,32 @@
         </div>
     </div>
 
-    <!-- Modal Conciergerie -->
-    <div id="modal-conciergerie" class="popup-overlay">
+    <!-- Modal Socle -->
+    <div id="modal-socle" class="popup-overlay">
         <div class="popup-content">
-            <button class="popup-close" onclick="closeModal('conciergerie')">&times;</button>
+            <button class="popup-close" onclick="closeModal('socle')">&times;</button>
             
             <!-- Header with wallpaper -->
             <div class="popup-header">
-                <div class="popup-wallpaper" style="background-image: url('portfolio/conciergerie-wall.png');">
-                    <h2 class="popup-title">Conciergerie de Luxe</h2>
+                <div class="popup-wallpaper" style="background-image: url('portfolio/socle.png');">
+                    <h2 class="popup-title">Socle</h2>
                 </div>
             </div>
             
             <!-- Logo positioned outside header -->
             <div class="popup-logo">
-                <img src="portfolio/conciergerie.png" alt="Conciergerie Logo">
+                <img src="portfolio/socle.png" alt="Socle Logo">
             </div>
             
             <!-- Content section -->
             <div class="popup-body">
                 <div class="popup-main-content">
                     <h3 data-i18n="common.aboutProject">À propos du projet</h3>
-                    <p class="popup-description">
-                        Plateforme web élégante pour une conciergerie haut de gamme offrant des services personnalisés. 
-                        Interface sophistiquée reflétant le standing et la qualité des services proposés.
+                    <p class="popup-description" data-i18n="projects.socleAbout">
+                        Socle est une plateforme que j’ai conçue et développée de A à Z : le « WordPress des sites codés ». Objectif — garder la liberté créative d’un site sur mesure, avec un back office simple pour éditer contenu, SEO et analytics. Une vraie app produit, pensée pour évoluer, avec analyse QA pour garantir la qualité à chaque livraison.
                     </p>
                     <p class="popup-link">
-                        <a href="https://conciergerie-lechappee.com/" target="_blank" rel="noopener noreferrer">conciergerie</a>
+                        <a href="https://socle-three.vercel.app/accueil" target="_blank" rel="noopener noreferrer">socle-three.vercel.app</a>
                     </p>
                 </div>
                 
@@ -332,20 +334,22 @@
                     <div class="popup-features">
                         <h4 data-i18n="common.features">Fonctionnalités</h4>
                         <ul>
-                            <li>Interface premium et raffinée</li>
-                            <li>Système de réservation en ligne</li>
-                            <li>Galerie de services interactive</li>
-                            <li>Espace client personnalisé</li>
-                            <li>Integration de paiement sécurisé</li>
+                            <li data-i18n="projects.socleFeat1">App React full-stack, architecturée de bout en bout</li>
+                            <li data-i18n="projects.socleFeat2">Données & infra : Docker + Neon (PostgreSQL)</li>
+                            <li data-i18n="projects.socleFeat3">Dev accéléré à l’IA avec Cursor</li>
+                            <li data-i18n="projects.socleFeat4">Back office SEO, liens traqués & analytics</li>
+                            <li data-i18n="projects.socleFeat5">Produit livré de l’idée au déploiement</li>
+                            <li data-i18n="projects.socleFeat6">Analyse QA et validation des parcours</li>
                         </ul>
                     </div>
                     <div class="popup-tech">
                         <h4 data-i18n="common.technologies">Technologies</h4>
                         <div class="tech-tags">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Hebergement</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Neon</span>
+                            <span class="tech-tag">Cursor</span>
+                            <span class="tech-tag">QA</span>
                         </div>
                     </div>
                 </div>
@@ -353,33 +357,29 @@
         </div>
     </div>
 
-    <!-- Modal Brebis Brigasque -->
-    <div id="modal-brebis" class="popup-overlay">
+    <!-- Modal Trainly -->
+    <div id="modal-trainly" class="popup-overlay">
         <div class="popup-content">
-            <button class="popup-close" onclick="closeModal('brebis')">&times;</button>
+            <button class="popup-close" onclick="closeModal('trainly')">&times;</button>
             
-            <!-- Header with wallpaper -->
             <div class="popup-header">
-                <div class="popup-wallpaper" style="background-image: url('portfolio/brebis-wall.png');">
-                    <h2 class="popup-title">Brebis Brigasque</h2>
+                <div class="popup-wallpaper popup-wallpaper--violet" style="background-image: url('portfolio/trainly-wall.svg'); background-color: #d6c4e8;">
+                    <h2 class="popup-title">Trainly</h2>
                 </div>
             </div>
             
-            <!-- Logo positioned outside header -->
             <div class="popup-logo">
-                <img src="portfolio/brebis.png" alt="Brebis Brigasque Logo">
+                <img src="portfolio/trainly-logo.svg" alt="Trainly Logo">
             </div>
             
-            <!-- Content section -->
             <div class="popup-body">
                 <div class="popup-main-content">
                     <h3 data-i18n="common.aboutProject">À propos du projet</h3>
-                    <p class="popup-description">
-                        Site web authentique dédié à la valorisation de la race ovine Brigasque et de ses produits artisanaux. 
-                        Design chaleureux mettant en valeur le patrimoine agricole et les traditions locales.
+                    <p class="popup-description" data-i18n="projects.trainlyAbout">
+                        Trainly est une app SaaS encore en création, conçue pour les coachs sportifs : programmes personnalisés, suivi client et espace white-label. Full-stack Next.js (App Router) + TypeScript + Supabase — une base type-safe, sécurisée et scalable, accélérée par une conception IA-assistée (agents Cursor), avec analyse QA pour fiabiliser chaque parcours.
                     </p>
                     <p class="popup-link">
-                        <a href="https://spaceman-dev86.github.io/Brebis_brigasque/" target="_blank" rel="noopener noreferrer">brebis-brigasque</a>
+                        <a href="https://trainly-sable.vercel.app/" target="_blank" rel="noopener noreferrer">trainly-sable.vercel.app</a>
                     </p>
                 </div>
                 
@@ -387,21 +387,22 @@
                     <div class="popup-features">
                         <h4 data-i18n="common.features">Fonctionnalités</h4>
                         <ul>
-                            <li>Galerie photo interactive</li>
-                            <li>Boutique en ligne intégrée</li>
-                            <li>Blog et actualités</li>
-                            <li>Carte des éleveurs partenaires</li>
-                            <li>Système de commande personnalisé</li>
+                            <li data-i18n="projects.trainlyFeat1">Programmes perso & catalogue coach</li>
+                            <li data-i18n="projects.trainlyFeat2">Messagerie pro (groupes, médias, réactions, read receipts)</li>
+                            <li data-i18n="projects.trainlyFeat3">Calendrier RDV, Drive & notifs</li>
+                            <li data-i18n="projects.trainlyFeat4">Portail white-label coach–client</li>
+                            <li data-i18n="projects.trainlyFeat5">Supabase : Postgres, RLS, Realtime, Storage</li>
+                            <li data-i18n="projects.trainlyFeat6">Analyse QA des parcours critiques</li>
                         </ul>
                     </div>
                     <div class="popup-tech">
                         <h4 data-i18n="common.technologies">Technologies</h4>
                         <div class="tech-tags">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">WordPress</span>
-                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Supabase</span>
+                            <span class="tech-tag">Cursor</span>
+                            <span class="tech-tag">QA</span>
                         </div>
                     </div>
                 </div>
